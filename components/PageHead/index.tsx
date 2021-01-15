@@ -11,7 +11,7 @@ const PageHead: React.FC<IPageHead> = ({ title, faviconHref, children }) => {
     <>
       <Head>
         <title>{title}</title>
-        {!!faviconHref && <link rel='icon' href={faviconHref} />}
+        {!!faviconHref && <link rel="icon" href={faviconHref} />}
         {!!children && children}
       </Head>
     </>
