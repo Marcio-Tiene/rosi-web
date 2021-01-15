@@ -1,7 +1,8 @@
 import styles from '../styles/Home.module.css';
 import PageHead from '../components/PageHead';
+import { NextPage } from 'next';
 
-const Home: React.FC = () => {
+const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <PageHead title="rosi" faviconHref="/favicon.ico" />
