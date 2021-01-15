@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+const GlobalStyles = createGlobalStyle`
+
 html,
 body {
   padding: 0;
@@ -14,3 +17,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h1 {
+  color: red
+
+}
+`;
+
+export default GlobalStyles;
