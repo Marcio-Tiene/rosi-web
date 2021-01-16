@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <>
       <PageHead title="rosi" faviconHref="/favicon.ico" />
-      <Pixel />
+      <Pixel name="pixelOne" />
 
       <PageMain>
         <h1>Hello Japão</h1>
