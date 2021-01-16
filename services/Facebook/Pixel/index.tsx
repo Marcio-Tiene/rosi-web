@@ -1,0 +1,18 @@
+import React from 'react';
+import Head from 'next/head';
+
+import PixelOne from './pixelOne';
+
+// interface IPixel {
+//   name: string;
+// }
+
+const Pixel: React.FC = () => {
+  return (
+    <Head>
+      <PixelOne />
+    </Head>
+  );
+};
+
+export default Pixel;
