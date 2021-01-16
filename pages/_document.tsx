@@ -40,6 +40,7 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
+          <meta name="Description" content="Rosi Job web page"></meta>
         </Head>
         <body>
           <Main />
