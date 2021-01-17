@@ -14,6 +14,8 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   MachineCode,
   EmailSequenceCode,
   SequenceLevelCode,
+  Score,
+  Source,
 }) => {
   const [hasInputError, setHasInputError] = useState({ Name: false, Email: false });
 
@@ -36,13 +38,15 @@ const LandingForm: React.FC<IPostLeadLover> = ({
       MachineCode,
       EmailSequenceCode,
       SequenceLevelCode,
+      Score,
+      Source,
     };
-    formRef.current &&
-      formRef.current?.setErrors({
-        Name: 'aqui vai aparecer o erro do nome',
-        Email: 'aqui vai aparecer o erro do email',
-      });
-    const formError = formRef.current && formRef.current?.getErrors();
+    const formError = {
+      Name: 'aqui vai aparecer o erro do nome',
+      Email: 'aqui vai aparecer o erro do email',
+    };
+    formRef.current && formRef.current?.setErrors(formError);
+
     console.log(formRef.current);
 
     for (const error in formError) {
@@ -53,7 +57,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   };
 
   return (
-    <Form ref={formRef} onSubmit={handleSubmit}>
+    <Form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
       <Input
         hasError={hasInputError.Name}
         onFocus={() => clearInputError('Name')}

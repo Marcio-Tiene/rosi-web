@@ -7,7 +7,7 @@ export interface IPostLeadLover {
   Company?: string;
   Phone?: string;
   Score?: number;
-  Tag?: number;
+  Tag?: string[];
   Source?: string;
   DynamicFields?: IDynamicFields[];
 }
