@@ -1,7 +1,7 @@
 import PageHead from '../components/PageHead';
 import { NextPage } from 'next';
 import PageMain from '../components/PageMain';
-import Pixel from '../services/Facebook/Pixel';
+import Pixel from '../components/PageHead/services/Facebook/Pixel';
 
 const Home: NextPage = () => {
   const pixelkey = process.env.PIXEL_KEY;

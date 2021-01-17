@@ -1,14 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import { useField } from '@unform/core';
+import { FormField } from './styles';
 
 interface Props {
   name: string;
   label?: string;
+  hasError: boolean;
 }
 
 type InputProps = JSX.IntrinsicElements['input'] & Props;
 
-const Input: React.FC<InputProps> = ({ name, label, ...rest }) => {
+const Input: React.FC<InputProps> = ({ name, label, hasError, ...rest }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const { fieldName, defaultValue, registerField, error } = useField(name);
@@ -23,11 +25,13 @@ const Input: React.FC<InputProps> = ({ name, label, ...rest }) => {
 
   return (
     <>
-      {label && <label htmlFor={fieldName}>{label}</label>}
+      <FormField inputError={hasError}>
+        {label && <label htmlFor={fieldName}>{label}</label>}
 
-      <input id={fieldName} ref={inputRef} defaultValue={defaultValue} {...rest} />
+        <input id={fieldName} ref={inputRef} defaultValue={defaultValue} {...rest} />
 
-      {error && <span className="error">{error}</span>}
+        {error && <span className="error">{error}</span>}
+      </FormField>
     </>
   );
 };
