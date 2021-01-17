@@ -3,14 +3,19 @@ import { SubmitHandler, FormHandles } from '@unform/core';
 import { Form } from './styles';
 import Input from '../Input';
 import Button from '../Button';
+import { IPostLeadLover } from '../../iterfaces/leadLovers';
 
 interface FormData {
   name: string;
   email: string;
 }
 
-const LandingForm: React.FC = () => {
-  const [hasInputError, setHasInputError] = useState({ name: false, email: false });
+const LandingForm: React.FC<IPostLeadLover> = ({
+  MachineCode,
+  EmailSequenceCode,
+  SequenceLevelCode,
+}) => {
+  const [hasInputError, setHasInputError] = useState({ Name: false, Email: false });
 
   const clearInputError = (inputName: string): void => {
     setHasInputError({ ...hasInputError, [inputName]: false });
@@ -25,31 +30,40 @@ const LandingForm: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
   const handleSubmit: SubmitHandler<FormData> = (data) => {
-    formRef.current?.setErrors({ name: 'alo alo', email: 'erro de email' });
-    const formError = formRef.current?.getErrors();
+    const initialLeadData = {
+      Name: '',
+      Email: '',
+      MachineCode,
+      EmailSequenceCode,
+      SequenceLevelCode,
+    };
+    formRef.current && formRef.current?.setErrors({ Name: 'alo alo', Email: 'erro de email' });
+    const formError = formRef.current && formRef.current?.getErrors();
+    console.log(formRef.current);
 
     for (const error in formError) {
       insertInputError(error);
     }
-    alert(JSON.stringify(data));
+    const LeadTopost = { ...initialLeadData, ...data };
+    alert(JSON.stringify(LeadTopost));
   };
 
   return (
     <Form ref={formRef} onSubmit={handleSubmit}>
       <Input
-        hasError={hasInputError.name}
-        onFocus={() => clearInputError('name')}
-        name="name"
+        hasError={hasInputError.Name}
+        onFocus={() => clearInputError('Name')}
+        name="Name"
         label="Nome:"
       />
       <Input
-        hasError={hasInputError.email}
-        onFocus={() => clearInputError('email')}
-        type="email"
-        name="email"
+        hasError={hasInputError.Email}
+        onFocus={() => clearInputError('Email')}
+        type="Email"
+        name="Email"
         label="E-mail:"
       />
-      <Button type="submit"> enviar</Button>
+      <Button type="submit"> Enviar </Button>
     </Form>
   );
 };

@@ -11,7 +11,7 @@ const MeuCurso: NextPage = () => {
 
       <PageMain>
         <h1>Hello curso novo</h1>
-        <LandingForm />
+        <LandingForm MachineCode={0} SequenceLevelCode={0} EmailSequenceCode={0} />
       </PageMain>
     </>
   );

@@ -12,6 +12,8 @@ export const FormField = styled.fieldset`
   flex-direction: column;
   border: none;
   input {
+    color: teal;
+
     box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white;
     text-indent: 1ch;
     border-radius: 1rem;
