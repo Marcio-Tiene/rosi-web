@@ -37,7 +37,11 @@ const LandingForm: React.FC<IPostLeadLover> = ({
       EmailSequenceCode,
       SequenceLevelCode,
     };
-    formRef.current && formRef.current?.setErrors({ Name: 'alo alo', Email: 'erro de email' });
+    formRef.current &&
+      formRef.current?.setErrors({
+        Name: 'aqui vai aparecer o erro do nome',
+        Email: 'aqui vai aparecer o erro do email',
+      });
     const formError = formRef.current && formRef.current?.getErrors();
     console.log(formRef.current);
 
