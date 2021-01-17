@@ -1,14 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 
-import PixelOne from './pixelOne';
+import PixelScript from './PixelScript';
 
 interface IPixel {
   name: string;
+  pixelKey: string;
 }
 
-const Pixel: React.FC<IPixel> = ({ name }) => {
-  return <Head>{name === 'PixelOne' && <PixelOne />}</Head>;
+const Pixel: React.FC<IPixel> = ({ name, pixelKey }) => {
+  return <Head>{name === 'PixelScript' && <PixelScript pixelKey={pixelKey} />}</Head>;
 };
 
 export default Pixel;
