@@ -40,6 +40,7 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
+          <link rel="manifest" href="./manifest.json" />
           <link rel="icon" href="./favicon.ico" />
           <meta name="Description" content="Rosi Job web page" />
           <link rel="icon" href="./rosijob-logo-32x32.png" />
