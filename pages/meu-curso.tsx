@@ -5,12 +5,13 @@ import PageMain from '../components/PageMain';
 import LandingForm from '../components/LandingForm';
 import ThanksPage from '../components/ThanksPage';
 import ThanksPageModalHook from '../hooks/ThanksPageModalHook';
+import NotificationBanner from '../components/NotificatioBanner';
 
 const MeuCurso: NextPage = () => {
   const { isThanksPageOpen } = ThanksPageModalHook();
   return (
     <>
-      <PageHead title="Meu curso" faviconHref="/favicon.ico" />
+      <PageHead />
 
       <PageMain>
         <h1>Hello curso novo</h1>
@@ -23,6 +24,9 @@ const MeuCurso: NextPage = () => {
         />
       </PageMain>
       <ThanksPage show={isThanksPageOpen} />
+      <NotificationBanner msgType="failure" isOpen={false}>
+        Ops! Algo deu errado em nossos servidores, tente novamente daqui a pouco.
+      </NotificationBanner>
     </>
   );
 };

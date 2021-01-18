@@ -1,17 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 
-interface IPageHead {
-  title: string;
-  faviconHref?: string;
-}
-
-const PageHead: React.FC<IPageHead> = ({ title, faviconHref, children }) => {
+const PageHead: React.FC = ({ children }) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        {!!faviconHref && <link rel="icon" href={faviconHref} />}
+        <title>ROSI JOB</title>
+
         {!!children && children}
       </Head>
     </>

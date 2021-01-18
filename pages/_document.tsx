@@ -40,7 +40,12 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="Description" content="Rosi Job web page"></meta>
+          <link rel="icon" href="./favicon.ico" />
+          <meta name="Description" content="Rosi Job web page" />
+          <link rel="icon" href="./rosijob-logo-32x32.png" />
+          <link rel="icon" href="./rosijob-logo-192x192.png" />
+          <link rel="apple-touch-icon" href="./rosijob-logo-180x180.png" />
+          <meta name="msapplication-TileImage" content="./rosijob-logo-270x270.png" />
         </Head>
         <body>
           <Main />

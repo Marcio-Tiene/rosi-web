@@ -12,6 +12,16 @@ const landingPageValidationSchema = Yup.object().shape({
     .email('Verifique se o E-mail está correto')
     .max(50, 'O Email deve conter no máximo 50 cararteres')
     .required('Precisamos desse dado para entrar em contato'),
+  Phone: Yup.number()
+    .required('Fique em contato direto conosco ')
+
+    .min(1000000000, 'O telefeone deve conter no minimo 10 dígitos numéricos')
+    .max(99999999999, 'O telefone deve conter no máximo 11 dígitos numéricos')
+    .test(
+      'is-required',
+      'Fique em contato direto conosco preenchendo o telefone',
+      (value) => value !== 0
+    ),
 });
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types

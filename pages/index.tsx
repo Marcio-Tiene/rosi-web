@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   const pixelkey = process.env.PIXEL_KEY;
   return (
     <>
-      <PageHead title="rosi" faviconHref="/favicon.ico" />
+      <PageHead />
 
       {!!pixelkey && <Pixel name="PixelScript" pixelKey={pixelkey} />}
 

@@ -8,9 +8,11 @@ import { IPostLeadLover } from '../../iterfaces/leadLovers';
 import { LandinPageFormValidation } from './services/FormValidation';
 import ThanksPageModalHook from '../../hooks/ThanksPageModalHook';
 import LoadingSpiner from '../LoadingSpiner';
+import Phonehandler from './services/PhoneHandler';
 interface FormData {
   Name: string;
   Email: string;
+  Phone: string;
 }
 
 const LandingForm: React.FC<IPostLeadLover> = ({
@@ -23,7 +25,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   const [isLoading, setIsLoading] = useState(false);
 
   const { setIsPageThanksOpen } = ThanksPageModalHook();
-  const [hasInputError, setHasInputError] = useState({ Name: false, Email: false });
+  const [hasInputError, setHasInputError] = useState({ Name: false, Email: false, Phone: false });
 
   const clearInputError = (inputName: string): void => {
     setHasInputError({ ...hasInputError, [inputName]: false });
@@ -42,6 +44,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     const initialLeadData = {
       Name: '',
       Email: '',
+      Phone: 0,
       MachineCode,
       EmailSequenceCode,
       SequenceLevelCode,
@@ -49,8 +52,13 @@ const LandingForm: React.FC<IPostLeadLover> = ({
       Source,
     };
 
+    const formatedPhone = Phonehandler(data.Phone);
+    console.log(formatedPhone);
+
+    const formatedData = { ...data, Phone: formatedPhone };
+
     try {
-      await LandinPageFormValidation(data);
+      await LandinPageFormValidation(formatedData);
       const LeadTopost = { ...initialLeadData, ...data };
       alert(JSON.stringify(LeadTopost));
       reset();
@@ -70,6 +78,8 @@ const LandingForm: React.FC<IPostLeadLover> = ({
             insertInputError(error);
           }
         });
+      } else {
+        console.error(err.message);
       }
       setIsLoading(false);
     }
@@ -89,6 +99,12 @@ const LandingForm: React.FC<IPostLeadLover> = ({
           onFocus={() => clearInputError('Email')}
           name="Email"
           label="E-mail:"
+        />
+        <Input
+          hasError={hasInputError.Phone}
+          onFocus={() => clearInputError('Phone')}
+          name="Phone"
+          label="Telefone:"
         />
         <Button disabled={isLoading} type="submit">
           {isLoading ? (
