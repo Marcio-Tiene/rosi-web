@@ -1,13 +1,15 @@
 import React, { useRef, useState } from 'react';
+import * as Yup from 'yup';
 import { SubmitHandler, FormHandles } from '@unform/core';
 import { Form } from './styles';
 import Input from '../Input';
 import Button from '../Button';
 import { IPostLeadLover } from '../../iterfaces/leadLovers';
+import { LandinPageFormValidation } from './services/FormValidation';
 
 interface FormData {
-  name: string;
-  email: string;
+  Name: string;
+  Email: string;
 }
 
 const LandingForm: React.FC<IPostLeadLover> = ({
@@ -31,7 +33,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   };
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit: SubmitHandler<FormData> = (data) => {
+  const handleSubmit: SubmitHandler<FormData> = async (data, { reset }) => {
     const initialLeadData = {
       Name: '',
       Email: '',
@@ -41,19 +43,28 @@ const LandingForm: React.FC<IPostLeadLover> = ({
       Score,
       Source,
     };
-    const formError = {
-      Name: 'aqui vai aparecer o erro do nome',
-      Email: 'aqui vai aparecer o erro do email',
-    };
-    formRef.current && formRef.current?.setErrors(formError);
 
-    console.log(formRef.current);
+    try {
+      await LandinPageFormValidation(data);
+      const LeadTopost = { ...initialLeadData, ...data };
+      alert(JSON.stringify(LeadTopost));
+      reset();
+    } catch (err) {
+      let formError = {};
+      if (err instanceof Yup.ValidationError) {
+        err.inner.forEach((error) => {
+          formError = {
+            ...formError,
+            [`${error.path}`]: error.message,
+          };
+          formRef.current && formRef.current?.setErrors(formError);
 
-    for (const error in formError) {
-      insertInputError(error);
+          for (const error in formError) {
+            insertInputError(error);
+          }
+        });
+      }
     }
-    const LeadTopost = { ...initialLeadData, ...data };
-    alert(JSON.stringify(LeadTopost));
   };
 
   return (
@@ -67,7 +78,6 @@ const LandingForm: React.FC<IPostLeadLover> = ({
       <Input
         hasError={hasInputError.Email}
         onFocus={() => clearInputError('Email')}
-        type="Email"
         name="Email"
         label="E-mail:"
       />
