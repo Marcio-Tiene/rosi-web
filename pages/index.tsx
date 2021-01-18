@@ -2,6 +2,7 @@ import PageHead from '../components/PageHead';
 import { NextPage } from 'next';
 import PageMain from '../components/PageMain';
 import Pixel from '../components/PageHead/services/Facebook/Pixel';
+import TopComponent from '../components/SectionTop';
 
 const Home: NextPage = () => {
   const pixelkey = process.env.PIXEL_KEY;
@@ -12,7 +13,7 @@ const Home: NextPage = () => {
       {!!pixelkey && <Pixel name="PixelScript" pixelKey={pixelkey} />}
 
       <PageMain>
-        <h1>Hello Japão</h1>
+        <TopComponent />
       </PageMain>
     </>
   );

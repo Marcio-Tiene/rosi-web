@@ -92,19 +92,19 @@ const LandingForm: React.FC<IPostLeadLover> = ({
           hasError={hasInputError.Name}
           onFocus={() => clearInputError('Name')}
           name="Name"
-          label="Nome:"
+          label="Nome completo*"
         />
         <Input
           hasError={hasInputError.Email}
           onFocus={() => clearInputError('Email')}
           name="Email"
-          label="E-mail:"
+          label="E-mail*"
         />
         <Input
           hasError={hasInputError.Phone}
           onFocus={() => clearInputError('Phone')}
           name="Phone"
-          label="Telefone:"
+          label="Telefone*"
         />
         <Button disabled={isLoading} type="submit">
           {isLoading ? (

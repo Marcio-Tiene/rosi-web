@@ -1,12 +1,29 @@
 import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
 
-html,
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html {
+  
+  --primary-color:#ff8d41;
+  --darkerPrimary-color:#ff6e07;
+  }  
+
 body {
-  padding: 0;
-  margin: 0;
+
+  height:100vh;
+  width:100vw;
+  
   background-color:#F0F0F0;
   font-family: Cambria, sans-serif;
+
+
 }
 
 a {
