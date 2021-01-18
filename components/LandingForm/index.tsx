@@ -6,7 +6,7 @@ import Input from '../Input';
 import Button from '../Button';
 import { IPostLeadLover } from '../../iterfaces/leadLovers';
 import { LandinPageFormValidation } from './services/FormValidation';
-
+import ThanksPageModalHook from '../../hooks/ThanksPageModalHook';
 interface FormData {
   Name: string;
   Email: string;
@@ -19,6 +19,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   Score,
   Source,
 }) => {
+  const { setIsPageThanksOpen } = ThanksPageModalHook();
   const [hasInputError, setHasInputError] = useState({ Name: false, Email: false });
 
   const clearInputError = (inputName: string): void => {
@@ -49,6 +50,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
       const LeadTopost = { ...initialLeadData, ...data };
       alert(JSON.stringify(LeadTopost));
       reset();
+      setIsPageThanksOpen(true);
     } catch (err) {
       let formError = {};
       if (err instanceof Yup.ValidationError) {
@@ -68,21 +70,23 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   };
 
   return (
-    <Form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
-      <Input
-        hasError={hasInputError.Name}
-        onFocus={() => clearInputError('Name')}
-        name="Name"
-        label="Nome:"
-      />
-      <Input
-        hasError={hasInputError.Email}
-        onFocus={() => clearInputError('Email')}
-        name="Email"
-        label="E-mail:"
-      />
-      <Button type="submit"> Enviar </Button>
-    </Form>
+    <>
+      <Form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
+        <Input
+          hasError={hasInputError.Name}
+          onFocus={() => clearInputError('Name')}
+          name="Name"
+          label="Nome:"
+        />
+        <Input
+          hasError={hasInputError.Email}
+          onFocus={() => clearInputError('Email')}
+          name="Email"
+          label="E-mail:"
+        />
+        <Button type="submit"> Enviar </Button>
+      </Form>
+    </>
   );
 };
 

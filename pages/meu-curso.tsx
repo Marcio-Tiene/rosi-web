@@ -3,8 +3,11 @@ import React from 'react';
 import PageHead from '../components/PageHead';
 import PageMain from '../components/PageMain';
 import LandingForm from '../components/LandingForm';
+import ThanksPage from '../components/ThanksPage';
+import ThanksPageModalHook from '../hooks/ThanksPageModalHook';
 
 const MeuCurso: NextPage = () => {
+  const { isThanksPageOpen } = ThanksPageModalHook();
   return (
     <>
       <PageHead title="Meu curso" faviconHref="/favicon.ico" />
@@ -19,6 +22,7 @@ const MeuCurso: NextPage = () => {
           Source="Landing page meu curso"
         />
       </PageMain>
+      <ThanksPage show={isThanksPageOpen} />
     </>
   );
 };
