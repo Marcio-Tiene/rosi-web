@@ -7,6 +7,7 @@ import Button from '../Button';
 import { IPostLeadLover } from '../../iterfaces/leadLovers';
 import { LandinPageFormValidation } from './services/FormValidation';
 import ThanksPageModalHook from '../../hooks/ThanksPageModalHook';
+import LoadingSpiner from '../LoadingSpiner';
 interface FormData {
   Name: string;
   Email: string;
@@ -19,6 +20,8 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   Score,
   Source,
 }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const { setIsPageThanksOpen } = ThanksPageModalHook();
   const [hasInputError, setHasInputError] = useState({ Name: false, Email: false });
 
@@ -35,6 +38,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   const formRef = useRef<FormHandles>(null);
 
   const handleSubmit: SubmitHandler<FormData> = async (data, { reset }) => {
+    setIsLoading(true);
     const initialLeadData = {
       Name: '',
       Email: '',
@@ -51,6 +55,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
       alert(JSON.stringify(LeadTopost));
       reset();
       setIsPageThanksOpen(true);
+      setIsLoading(false);
     } catch (err) {
       let formError = {};
       if (err instanceof Yup.ValidationError) {
@@ -66,6 +71,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
           }
         });
       }
+      setIsLoading(false);
     }
   };
 
@@ -84,7 +90,13 @@ const LandingForm: React.FC<IPostLeadLover> = ({
           name="Email"
           label="E-mail:"
         />
-        <Button type="submit"> Enviar </Button>
+        <Button disabled={isLoading} type="submit">
+          {isLoading ? (
+            <LoadingSpiner height="1rem" color="white" containerWidth="5ch" />
+          ) : (
+            'Enviar'
+          )}{' '}
+        </Button>
       </Form>
     </>
   );
