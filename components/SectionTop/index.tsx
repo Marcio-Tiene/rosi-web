@@ -15,9 +15,9 @@ const TopComponent: React.FC = () => {
   return (
     <>
       <SectionTop bgImg="/main-bg-img.jpg">
-        <MainRosiImg src="/rosi-picture.png" alt="Rosi picture" />
+        <MainRosiImg src="/rosi-picture.png" alt="Foto da Rosi" />
         <TopSectionContentContainer>
-          <SectionTopImg src="/logotype.png" />
+          <SectionTopImg src="/logotype.png" alt="Logotipo Rosi job" />
 
           <AtributeList>
             <li>

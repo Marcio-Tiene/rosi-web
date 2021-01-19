@@ -18,7 +18,7 @@ export const SectionTop = styled.section`
   /* padding: 0 2.5vw; */
   overflow: hidden;
 
-  background-color: #081024;
+  background-color: #03060e;
   background-image: url(${(p: ISectionTop) => p.bgImg});
 
   background-repeat: no-repeat;
@@ -76,9 +76,9 @@ export const AtributeList = styled.ul`
     align-self: flex-start;
     font-weight: 600;
     font-size: 2rem;
-    color: var(--primary-color);
+    color: white;
     list-style: none;
-    text-shadow: 0 0 12px #ffffff;
+    /* text-shadow: 0 0 12px #ffffff; */
     gap: 2rem;
   }
 `;

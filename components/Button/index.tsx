@@ -8,16 +8,16 @@ const Button = styled.button`
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  background-color: var(--primary-color);
+  background-color: green;
   box-shadow: 0px 4px 10px #626466;
   border: none;
   outline: none;
   transition: linear 0.2s;
   &:hover {
-    background-color: var(--darkerPrimary-color);
+    background-color: #028b02;
   }
   &:active {
-    background-color: var(--darkerPrimary-color);
+    background-color: #028b02;
     box-shadow: 0px 0px 0px #626466;
   }
 `;

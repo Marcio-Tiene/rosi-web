@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) transparent;
+  scrollbar-color: rgba(0, 0, 63, 0.342) transparent;
   overflow-y: auto;
   overflow-x: hidden;
   ::-webkit-scrollbar {
@@ -22,15 +22,14 @@ const GlobalStyles = createGlobalStyle`
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: rgba(0, 0, 63, 0.342);
     border-radius: 5px;
   }
   }
 
 html {
   
-  --primary-color:#ff8d41;
-  --darkerPrimary-color:#ff6e07;
+  
   }  
 
 body {
@@ -53,10 +52,7 @@ a {
   box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6{
-  color: var(--darkerPrimary-color)
 
-}
 `;
 
 export default GlobalStyles;

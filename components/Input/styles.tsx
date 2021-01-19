@@ -24,14 +24,14 @@ export const FormField = styled.div`
     overflow: hidden;
     &:focus {
       outline: none;
-      box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px var(--primary-color);
+      box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px green;
       background-color: transparent;
     }
     ${(p: IInput) =>
       p.inputError &&
       css`
-        box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #ff8d41;
-        background-color: rgba(255, 141, 65, 0.507);
+        box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red;
+        background-color: rgba(255, 0, 0, 0.185);
         overflow: hidden;
       `}
   }

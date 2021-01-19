@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { FaCheck } from 'react-icons/fa';
 
 export const SectionTwo = styled.section`
-  min-height: 100vh;
   height: fit-content;
   width: 100vw;
 
@@ -17,6 +16,7 @@ export const SectionTwo = styled.section`
 export const MyPathWayTitle = styled.h1`
   font-size: 3.7rem;
   max-width: 90vw;
+  color: black;
 `;
 
 export const AchivementsList = styled.ul`
