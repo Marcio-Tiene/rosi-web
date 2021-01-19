@@ -10,7 +10,7 @@ import ThanksPageModalHook from '../../hooks/ThanksPageModalHook';
 import ServerErrorHook from '../../hooks/ServerErrorHook';
 import LoadingSpiner from '../LoadingSpiner';
 import Phonehandler from './services/PhoneHandler';
-// import leadLoversapi from '../../services/leadeLoversApi';
+import leadLoversapi from '../../services/leadeLoversApi';
 interface FormData {
   Name: string;
   Email: string;
@@ -64,7 +64,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     try {
       await LandinPageFormValidation(formatedData);
       const LeadTopost = { ...initialLeadData, ...formatedData };
-      // await leadLoversapi.post('/');
+      await leadLoversapi.post('/');
       alert(JSON.stringify(LeadTopost));
       reset();
       setIsPageThanksOpen(true);

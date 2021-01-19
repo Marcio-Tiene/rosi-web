@@ -14,10 +14,10 @@ import {
 const TopComponent: React.FC = () => {
   return (
     <>
-      <SectionTop bgImg="/main-bg-img.jpg">
-        <MainRosiImg src="/rosi-picture.png" alt="Foto da Rosi" />
+      <SectionTop bgImg="/main-bg-img.webp">
+        <MainRosiImg src="/rosi-picture.webp" alt="Foto da Rosi" />
         <TopSectionContentContainer>
-          <SectionTopImg src="/logotype.png" alt="Logotipo Rosi job" />
+          <SectionTopImg src="/logotype.webp" alt="Logotipo Rosi job" />
 
           <AtributeList>
             <li>
