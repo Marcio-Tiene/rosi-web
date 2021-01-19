@@ -3,7 +3,7 @@ interface IInput {
   inputError: boolean;
 }
 
-export const FormField = styled.div`
+export const FormField = styled.fieldset`
   margin: 0;
   padding: 0;
   padding-left: 3px;

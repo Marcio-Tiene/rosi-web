@@ -15,8 +15,8 @@ const PageMainFooter: React.FC = () => {
           rel="noopener noreferrer"
         >
           Marcio Tiene
-        </a>{' '}
-        – Todos os direitos reservados.
+        </a>
+        .
       </strong>
     </CopyrightFooter>
   );

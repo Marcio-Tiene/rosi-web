@@ -98,13 +98,12 @@ const LandingForm: React.FC<IPostLeadLover> = ({
 
   return (
     <>
-      <Form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
+      <Form id="quero-participar" autoComplete="on" ref={formRef} onSubmit={handleSubmit}>
         <FormTitle>
           {children}
           <br />
         </FormTitle>
         <Input
-          id="quero-participar"
           hasError={hasInputError.Name}
           onFocus={() => clearInputError('Name')}
           name="Name"
