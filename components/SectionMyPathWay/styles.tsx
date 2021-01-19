@@ -16,6 +16,7 @@ export const SectionTwo = styled.section`
 
 export const MyPathWayTitle = styled.h1`
   font-size: 3.7rem;
+  max-width: 90vw;
 `;
 
 export const AchivementsList = styled.ul`
@@ -25,9 +26,13 @@ export const AchivementsList = styled.ul`
   gap: 2.5rem;
   width: 80vw;
   li {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
     text-align: justify;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 `;
 

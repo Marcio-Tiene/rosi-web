@@ -59,7 +59,7 @@ export const TopSectionContentContainer = styled.div`
   @media (max-width: 1067px) {
     margin-top: 20px;
     min-height: fit-content;
-    width: 95vw;
+    width: 90vw;
     gap: 20px;
   }
 `;

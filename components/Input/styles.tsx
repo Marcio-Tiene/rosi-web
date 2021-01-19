@@ -12,7 +12,7 @@ export const FormField = styled.div`
   flex-direction: column;
   border: none;
   input {
-    color: var(--darkerPrimary-color);
+    color: black;
     box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white;
     text-indent: 1ch;
     border-radius: 1rem;

@@ -19,7 +19,7 @@ export const Form = styled(Unform)`
   label {
     margin-bottom: 3px;
     font-weight: 600;
-    color: var(--darkerPrimary-color);
+    color: black;
   }
 
   button {
@@ -32,15 +32,15 @@ export const Form = styled(Unform)`
   .error {
     margin-top: 2px;
     align-self: flex-end;
-    color: var(--darkerPrimary-color);
+    color: black;
     font-size: 0.6rem;
     background-color: transparent;
   }
 `;
 
 export const FormTitle = styled.h1`
-  color: var(--darkerPrimary-color);
+  color: black;
   font-size: 1.5rem;
   text-align: justify;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import LandingForm from '../LandingForm';
-import { FiTarget } from 'react-icons/fi';
-import { VscFeedback } from 'react-icons/vsc';
+// import { FiTarget } from 'react-icons/fi';
+// import { VscFeedback } from 'react-icons/vsc';
 import {
   AtributeList,
   CurveSvg,
@@ -21,7 +21,7 @@ const TopComponent: React.FC = () => {
 
           <AtributeList>
             <li>
-              <FiTarget
+              {/* <FiTarget
                 color="red"
                 size={50}
                 style={{
@@ -30,15 +30,15 @@ const TopComponent: React.FC = () => {
                   minHeight: '50px',
                   minWidth: '50px',
                 }}
-              />
+              /> */}
               Especialista em liderança e Gestão de Pessoas
             </li>
             <li>
-              <VscFeedback
+              {/* <VscFeedback
                 color="white"
                 size={50}
                 style={{ minHeight: '50px', minWidth: '50px' }}
-              />
+              /> */}
               Mentoria de Liderança e Carreira
             </li>
           </AtributeList>
