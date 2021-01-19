@@ -6,8 +6,9 @@ export const Form = styled(Unform)`
   padding: 1rem;
   /* margin-right: 45px; */
   /* margin-top: 200px; */
-  width: 245px;
+  width: 320px;
   margin-bottom: 20px;
+  margin-top: 20px;
 
   height: fit-content;
   display: flex;
@@ -40,7 +41,7 @@ export const Form = styled(Unform)`
 
 export const FormTitle = styled.h1`
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: justify;
   margin-bottom: 1rem;
 `;
