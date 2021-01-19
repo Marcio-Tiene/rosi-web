@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { FaCheck } from 'react-icons/fa';
 
 export const SectionTwo = styled.section`
+  position: relative;
   height: fit-content;
   width: 100vw;
 
@@ -10,7 +11,9 @@ export const SectionTwo = styled.section`
   align-items: center;
   /* justify-content: center; */
   padding: 50px 2.5vw;
+  padding-bottom: 150px;
   gap: 50px;
+  overflow-y: hidden;
 `;
 
 export const MyPathWayTitle = styled.h1`
@@ -38,4 +41,14 @@ export const AchivementsList = styled.ul`
 
 export const CheckIcon = styled(FaCheck)`
   margin-right: 2rem;
+`;
+
+export const SectioTwoContainerCurve = styled.svg`
+  position: absolute;
+
+  bottom: -1px;
+  left: 0;
+  display: block;
+  width: 100vw;
+  overflow-x: hidden;
 `;
