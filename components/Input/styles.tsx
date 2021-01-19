@@ -6,6 +6,8 @@ interface IInput {
 export const FormField = styled.div`
   margin: 0;
   padding: 0;
+  padding-left: 3px;
+  padding-right: 3px;
   height: 80px;
 
   display: flex;
@@ -30,7 +32,7 @@ export const FormField = styled.div`
     ${(p: IInput) =>
       p.inputError &&
       css`
-        box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red;
+        box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red, 0 0 0 1px red;
         background-color: rgba(255, 0, 0, 0.185);
         overflow: hidden;
       `}
