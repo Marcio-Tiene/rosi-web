@@ -4,11 +4,12 @@ import styled from 'styled-components';
 export const Form = styled(Unform)`
   z-index: 10;
   padding: 1rem;
-  margin-right: 45px;
+  /* margin-right: 45px; */
   /* margin-top: 200px; */
   width: 245px;
+  margin-bottom: 20px;
 
-  height: 350px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   border-radius: 2rem;
@@ -33,6 +34,7 @@ export const Form = styled(Unform)`
     align-self: flex-end;
     color: var(--darkerPrimary-color);
     font-size: 0.6rem;
+    background-color: transparent;
   }
 `;
 

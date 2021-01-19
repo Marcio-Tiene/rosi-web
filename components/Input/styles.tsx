@@ -6,7 +6,7 @@ interface IInput {
 export const FormField = styled.div`
   margin: 0;
   padding: 0;
-  height: 62px;
+  height: 65px;
 
   display: flex;
   flex-direction: column;

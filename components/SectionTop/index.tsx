@@ -5,6 +5,7 @@ import { VscFeedback } from 'react-icons/vsc';
 import {
   AtributeList,
   CurveSvg,
+  MainRosiImg,
   SectionTop,
   SectionTopImg,
   TopSectionContentContainer,
@@ -14,6 +15,7 @@ const TopComponent: React.FC = () => {
   return (
     <>
       <SectionTop bgImg="/main-bg-img.jpg">
+        <MainRosiImg src="/rosi-picture.png" alt="Rosi picture" />
         <TopSectionContentContainer>
           <SectionTopImg src="/logotype.png" />
 
@@ -22,12 +24,21 @@ const TopComponent: React.FC = () => {
               <FiTarget
                 color="red"
                 size={50}
-                style={{ backgroundColor: 'white', borderRadius: '50%' }}
+                style={{
+                  backgroundColor: 'white',
+                  borderRadius: '25px',
+                  minHeight: '50px',
+                  minWidth: '50px',
+                }}
               />
               Especialista em liderança e Gestão de Pessoas
             </li>
             <li>
-              <VscFeedback color="white" size={50} />
+              <VscFeedback
+                color="white"
+                size={50}
+                style={{ minHeight: '50px', minWidth: '50px' }}
+              />
               Mentoria de Liderança e Carreira
             </li>
           </AtributeList>
