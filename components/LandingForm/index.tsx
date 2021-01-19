@@ -10,6 +10,7 @@ import ThanksPageModalHook from '../../hooks/ThanksPageModalHook';
 import ServerErrorHook from '../../hooks/ServerErrorHook';
 import LoadingSpiner from '../LoadingSpiner';
 import Phonehandler from './services/PhoneHandler';
+import leadLoversapi from '../../services/leadeLoversApi';
 interface FormData {
   Name: string;
   Email: string;
@@ -64,6 +65,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     try {
       await LandinPageFormValidation(formatedData);
       const LeadTopost = { ...initialLeadData, ...data };
+      await leadLoversapi.post('/');
       alert(JSON.stringify(LeadTopost));
       reset();
       setIsPageThanksOpen(true);
@@ -110,6 +112,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
         />
         <Input
           hasError={hasInputError.Email}
+          placeholder="exemplo@exemplo.com"
           onFocus={() => clearInputError('Email')}
           name="Email"
           label="E-mail*"
@@ -117,6 +120,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
         <Input
           hasError={hasInputError.Phone}
           onFocus={() => clearInputError('Phone')}
+          placeholder="Só números"
           name="Phone"
           label="Telefone*"
         />

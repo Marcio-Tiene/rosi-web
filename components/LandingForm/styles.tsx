@@ -5,8 +5,8 @@ export const Form = styled(Unform)`
   z-index: 10;
   padding: 1rem;
   margin-right: 45px;
-  width: 20vw;
-  min-width: 270px;
+  width: 245px;
+  /* min-width: 270px; */
   min-height: 270px;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ export const Form = styled(Unform)`
   button {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 10px;
     width: 100%;
   }
 

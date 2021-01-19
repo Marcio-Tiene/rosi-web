@@ -20,7 +20,7 @@ const landingPageValidationSchema = Yup.object().shape({
     .test(
       'is-required',
       'Fique em contato direto conosco preenchendo o telefone',
-      (value) => value !== 0
+      (value) => value !== 55
     ),
 });
 
