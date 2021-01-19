@@ -5,7 +5,7 @@ const PageHead: React.FC = ({ children }) => {
   return (
     <>
       <Head>
-        <title>ROSI JOB</title>
+        <title>Rosi Job</title>
 
         {!!children && children}
       </Head>
