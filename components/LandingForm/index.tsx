@@ -28,7 +28,8 @@ const LandingForm: React.FC<IPostLeadLover> = ({
 
   const { setIsServerErrorOpen } = ServerErrorHook();
   const { setIsPageThanksOpen } = ThanksPageModalHook();
-  const [hasInputError, setHasInputError] = useState({ Name: false, Email: false, Phone: false });
+  const hasNoInputerros = { Name: false, Email: false, Phone: false };
+  const [hasInputError, setHasInputError] = useState(hasNoInputerros);
 
   const clearInputError = (inputName: string): void => {
     setHasInputError({ ...hasInputError, [inputName]: false });
@@ -56,9 +57,10 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     };
 
     const formatedPhone = Phonehandler(data.Phone);
+    console.log(formatedPhone);
 
     const formatedData = { ...data, Phone: formatedPhone };
-
+    let formError = {};
     try {
       await LandinPageFormValidation(formatedData);
       const LeadTopost = { ...initialLeadData, ...data };
@@ -66,8 +68,9 @@ const LandingForm: React.FC<IPostLeadLover> = ({
       reset();
       setIsPageThanksOpen(true);
       setIsLoading(false);
+      formRef.current?.setErrors({ Name: '', Email: '', Phone: '' });
+      setHasInputError(hasNoInputerros);
     } catch (err) {
-      let formError = {};
       if (err instanceof Yup.ValidationError) {
         err.inner.forEach((error) => {
           formError = {

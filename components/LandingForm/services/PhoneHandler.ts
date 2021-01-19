@@ -2,9 +2,13 @@ const PhoneFilter: (phone: string) => string[] = (phone: string) =>
   phone.split('').filter((character) => !isNaN(Number(character)));
 
 const Phonehandler: (phone: string) => number = (phone: string) => {
-  const phoneOnlyNumbersInStringFormat = PhoneFilter(phone).join('');
+  const phoneOnlyNumbers = PhoneFilter(phone);
+  phoneOnlyNumbers.unshift('55');
 
-  return Number(phoneOnlyNumbersInStringFormat);
+  const formatedPhoneInStringFormat = phoneOnlyNumbers.join('');
+  console.log(formatedPhoneInStringFormat);
+
+  return Number(formatedPhoneInStringFormat);
 };
 
 export default Phonehandler;

@@ -6,6 +6,8 @@ interface IModal {
 
 export const ModalBackground = styled.dialog`
   display: none;
+  position: fixed;
+  z-index: 1000;
 
   opacity: 0;
 
