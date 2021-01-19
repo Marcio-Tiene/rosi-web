@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
       <PageMain>
         <TopComponent />
-        <section style={{ height: '100vh' }}></section>
+        <section style={{ height: '100vh' }}>alo alo</section>
       </PageMain>
       <ThanksPage show={isThanksPageOpen} />
       <NotificationBanner

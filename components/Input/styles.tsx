@@ -23,7 +23,7 @@ export const FormField = styled.div`
     transition: linear box-shadow 0.2s;
     &:focus {
       outline: none;
-      box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px var;
+      box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px var(--primary-color);
       background-color: transparent;
     }
     ${(p: IInput) =>

@@ -5,7 +5,7 @@ import { CurveSvg, SectionTop, SectionTopImg } from './styles';
 const TopComponent: React.FC = () => {
   return (
     <>
-      <SectionTop bgImg="/main-bg-img.png">
+      <SectionTop bgImg="/main-bg-img.jpg">
         <SectionTopImg src="/logotype.png" />
         <LandingForm
           MachineCode={0}

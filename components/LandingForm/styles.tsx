@@ -5,14 +5,15 @@ export const Form = styled(Unform)`
   z-index: 10;
   padding: 1rem;
   margin-right: 45px;
+  /* margin-top: 200px; */
   width: 245px;
-  /* min-width: 270px; */
-  min-height: 270px;
+
+  height: 350px;
   display: flex;
   flex-direction: column;
   border-radius: 2rem;
   box-shadow: 4px 4px 20px #cbced1;
-  background-color: #ececec;
+  background-color: white;
 
   label {
     margin-bottom: 3px;

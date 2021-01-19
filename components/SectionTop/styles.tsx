@@ -15,7 +15,7 @@ export const SectionTop = styled.section`
   padding-right: 15vw;
 
   width: 100vw;
-  height: fit-content;
+  height: 100vh;
   min-height: 100vh;
 
   background-color: #081024;
@@ -23,6 +23,7 @@ export const SectionTop = styled.section`
 
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-position: top 0px left -100px; */
 `;
 
 export const CurveSvg = styled.svg`
@@ -32,9 +33,11 @@ export const CurveSvg = styled.svg`
   left: 0;
   display: block;
   width: 100vw;
+  overflow-x: hidden;
 `;
 export const SectionTopImg = styled.img`
-  width: 35vw;
-  height: 8vw;
+  width: 360px;
+
+  height: 90px;
   align-self: flex-end;
 `;
