@@ -5,6 +5,7 @@ interface INotificationBox {
 }
 
 export const NotificatioBox = styled.dialog`
+  z-index: 1000;
   margin: 0;
   width: fit-content;
   max-width: 95vw;
