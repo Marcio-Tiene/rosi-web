@@ -1,12 +1,13 @@
 import React, { useRef, useState } from 'react';
 import * as Yup from 'yup';
 import { SubmitHandler, FormHandles } from '@unform/core';
-import { Form } from './styles';
+import { Form, FormTitle } from './styles';
 import Input from '../Input';
 import Button from '../Button';
 import { IPostLeadLover } from '../../iterfaces/leadLovers';
 import { LandinPageFormValidation } from './services/FormValidation';
 import ThanksPageModalHook from '../../hooks/ThanksPageModalHook';
+import ServerErrorHook from '../../hooks/ServerErrorHook';
 import LoadingSpiner from '../LoadingSpiner';
 import Phonehandler from './services/PhoneHandler';
 interface FormData {
@@ -16,6 +17,7 @@ interface FormData {
 }
 
 const LandingForm: React.FC<IPostLeadLover> = ({
+  children,
   MachineCode,
   EmailSequenceCode,
   SequenceLevelCode,
@@ -24,6 +26,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
 }) => {
   const [isLoading, setIsLoading] = useState(false);
 
+  const { setIsServerErrorOpen } = ServerErrorHook();
   const { setIsPageThanksOpen } = ThanksPageModalHook();
   const [hasInputError, setHasInputError] = useState({ Name: false, Email: false, Phone: false });
 
@@ -53,7 +56,6 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     };
 
     const formatedPhone = Phonehandler(data.Phone);
-    console.log(formatedPhone);
 
     const formatedData = { ...data, Phone: formatedPhone };
 
@@ -77,17 +79,26 @@ const LandingForm: React.FC<IPostLeadLover> = ({
           for (const error in formError) {
             insertInputError(error);
           }
+          setIsLoading(false);
         });
       } else {
+        setIsServerErrorOpen(true);
         console.error(err.message);
+        setTimeout(() => {
+          setIsServerErrorOpen(false);
+          setIsLoading(false);
+        }, 5000);
       }
-      setIsLoading(false);
     }
   };
 
   return (
     <>
       <Form autoComplete="off" ref={formRef} onSubmit={handleSubmit}>
+        <FormTitle>
+          {children}
+          <br />
+        </FormTitle>
         <Input
           hasError={hasInputError.Name}
           onFocus={() => clearInputError('Name')}
@@ -110,7 +121,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
           {isLoading ? (
             <LoadingSpiner height="1rem" color="white" containerWidth="5ch" />
           ) : (
-            'Enviar'
+            'Sim Eu Quero!'
           )}{' '}
         </Button>
       </Form>

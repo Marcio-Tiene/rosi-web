@@ -35,8 +35,8 @@ a {
   box-sizing: border-box;
 }
 
-h1 {
-  color: red
+h1,h2,h3,h4,h5,h6{
+  color: var(--darkerPrimary-color)
 
 }
 `;

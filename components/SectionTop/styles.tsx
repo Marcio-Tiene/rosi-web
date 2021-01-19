@@ -5,14 +5,18 @@ interface ISectionTop {
 }
 
 export const SectionTop = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.5vw;
-  padding-right: 20vw;
+  align-items: flex-end;
+  padding-top: 2.5vw;
+  padding-bottom: 4vw;
+  padding-right: 15vw;
 
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
 
   background-color: #081024;
   background-image: url(${(p: ISectionTop) => p.bgImg});
@@ -21,8 +25,16 @@ export const SectionTop = styled.section`
   background-size: cover;
 `;
 
+export const CurveSvg = styled.svg`
+  position: absolute;
+
+  bottom: -1px;
+  left: 0;
+  display: block;
+  width: 100vw;
+`;
 export const SectionTopImg = styled.img`
-  width: 400px;
-  height: 102px;
+  width: 35vw;
+  height: 8vw;
   align-self: flex-end;
 `;
