@@ -41,8 +41,8 @@ export const SectionTopImg = styled.img`
   height: 90px;
 
   @media (max-width: 1067px) {
-    /* position: absolute; */
-    /* top: 10px; */
+    position: absolute;
+    top: 10px;
     width: 95vw;
     height: 23.75vw;
   }
@@ -65,7 +65,6 @@ export const TopSectionContentContainer = styled.div`
 `;
 
 export const AtributeList = styled.ul`
-  /* flex: 1; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -96,6 +95,6 @@ export const MainRosiImg = styled.img`
     width: 95vw;
   }
   @media (max-width: 900px) {
-    display: none;
+    /* display: none; */
   }
 `;
