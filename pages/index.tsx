@@ -7,6 +7,7 @@ import ThanksPage from '../components/ThanksPage';
 import NotificationBanner from '../components/NotificatioBanner';
 import ThanksPageModalHook from '../hooks/ThanksPageModalHook';
 import ServerErrorHook from '../hooks/ServerErrorHook';
+import SectionMyPathWay from '../components/SectionMyPathWay';
 
 const Home: NextPage = () => {
   const pixelkey = process.env.PIXEL_KEY;
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
 
       <PageMain>
         <TopComponent />
-        <section style={{ height: '100vh' }}>alo alo</section>
+        <SectionMyPathWay>alo alo</SectionMyPathWay>
       </PageMain>
       <ThanksPage show={isThanksPageOpen} />
       <NotificationBanner
