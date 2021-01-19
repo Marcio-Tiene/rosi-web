@@ -29,10 +29,6 @@ export const AchivementsList = styled.ul`
   gap: 2.5rem;
   width: 80vw;
   li {
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
     text-align: justify;
     font-weight: 500;
     font-size: 1.5rem;
