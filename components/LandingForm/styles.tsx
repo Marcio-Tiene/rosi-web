@@ -7,7 +7,7 @@ export const Form = styled(Unform)`
   /* margin-right: 45px; */
   /* margin-top: 200px; */
   width: 330px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-top: 20px;
 
   height: fit-content;

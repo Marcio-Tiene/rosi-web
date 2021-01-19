@@ -10,6 +10,7 @@ export const SectionTop = styled.section`
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  padding-top: 20px;
 
   width: 100vw;
   /* min-height: 100vh; */
