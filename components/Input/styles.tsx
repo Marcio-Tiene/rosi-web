@@ -6,7 +6,7 @@ interface IInput {
 export const FormField = styled.div`
   margin: 0;
   padding: 0;
-  height: 65px;
+  height: 80px;
 
   display: flex;
   flex-direction: column;
@@ -21,6 +21,7 @@ export const FormField = styled.div`
     border: none;
     width: 100%;
     transition: linear box-shadow 0.2s;
+    overflow: hidden;
     &:focus {
       outline: none;
       box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px var(--primary-color);
@@ -31,6 +32,7 @@ export const FormField = styled.div`
       css`
         box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #ff8d41;
         background-color: rgba(255, 141, 65, 0.507);
+        overflow: hidden;
       `}
   }
 `;

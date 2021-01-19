@@ -21,6 +21,7 @@ export const Form = styled(Unform)`
     margin-bottom: 3px;
     font-weight: 600;
     color: black;
+    overflow: hidden;
   }
 
   button {
@@ -34,8 +35,9 @@ export const Form = styled(Unform)`
     margin-top: 2px;
     align-self: flex-end;
     color: black;
-    font-size: 0.6rem;
+    font-size: 1rem;
     background-color: transparent;
+    overflow: hidden;
   }
 `;
 
