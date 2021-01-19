@@ -47,7 +47,8 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta property="og:title" content="Rosi Job" />
-          <meta property="og:image" content="/android-chrome-256x256.png" />
+          <meta property="og:description" content="Mentoria de Liderança e Carreira" />
+          <meta property="og:image" content="/ogmeta-icon.png" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
