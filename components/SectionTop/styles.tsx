@@ -39,5 +39,32 @@ export const SectionTopImg = styled.img`
   width: 360px;
 
   height: 90px;
-  align-self: flex-end;
+`;
+
+export const TopSectionContentContainer = styled.div`
+  height: 100%;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const AtributeList = styled.ul`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  li {
+    display: flex;
+    justify-content: center;
+    line-height: 3rem;
+    align-self: center;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--primary-color);
+    list-style: none;
+    text-shadow: 0 0 12px #ffffff;
+    gap: 2rem;
+  }
 `;

@@ -6,7 +6,6 @@ const Phonehandler: (phone: string) => number = (phone: string) => {
   phoneOnlyNumbers.unshift('55');
 
   const formatedPhoneInStringFormat = phoneOnlyNumbers.join('');
-  console.log(formatedPhoneInStringFormat);
 
   return Number(formatedPhoneInStringFormat);
 };

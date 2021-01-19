@@ -1,21 +1,47 @@
 import React from 'react';
 import LandingForm from '../LandingForm';
-import { CurveSvg, SectionTop, SectionTopImg } from './styles';
+import { FiTarget } from 'react-icons/fi';
+import { VscFeedback } from 'react-icons/vsc';
+import {
+  AtributeList,
+  CurveSvg,
+  SectionTop,
+  SectionTopImg,
+  TopSectionContentContainer,
+} from './styles';
 
 const TopComponent: React.FC = () => {
   return (
     <>
       <SectionTop bgImg="/main-bg-img.jpg">
-        <SectionTopImg src="/logotype.png" />
-        <LandingForm
-          MachineCode={0}
-          SequenceLevelCode={0}
-          EmailSequenceCode={0}
-          Score={10}
-          Source="Landing page meu curso"
-        >
-          Que tal trocarmos experiencias sobre liderança e gestão?
-        </LandingForm>
+        <TopSectionContentContainer>
+          <SectionTopImg src="/logotype.png" />
+
+          <AtributeList>
+            <li>
+              <FiTarget
+                color="red"
+                size={50}
+                style={{ backgroundColor: 'white', borderRadius: '50%' }}
+              />
+              Especialista em liderança e Gestão de Pessoas
+            </li>
+            <li>
+              <VscFeedback color="white" size={50} />
+              Mentoria de Liderança e Carreira
+            </li>
+          </AtributeList>
+          <LandingForm
+            MachineCode={0}
+            SequenceLevelCode={0}
+            EmailSequenceCode={0}
+            Score={10}
+            Source="Landing page meu curso"
+          >
+            Que tal trocarmos experiencias sobre liderança e gestão?
+          </LandingForm>
+        </TopSectionContentContainer>
+
         <CurveSvg xmlns="http://www.w3.org/2000/CurveSvg" viewBox="0 0 1440 220">
           <path
             fill="#F0F0F0"
