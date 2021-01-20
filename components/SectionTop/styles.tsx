@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-interface ISectionTop {
-  bgImg: string;
-}
-
 export const SectionTop = styled.section`
   position: relative;
   display: flex;
@@ -19,8 +15,7 @@ export const SectionTop = styled.section`
   /* padding: 0 2.5vw; */
   overflow: hidden;
 
-  background-color: #03060e;
-  background-image: url(${(p: ISectionTop) => p.bgImg});
+  background-color: #040205;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,16 +31,16 @@ export const CurveSvg = styled.svg`
   overflow-x: hidden;
 `;
 export const SectionTopImg = styled.img`
-  width: 360px;
+  width: 300px;
   max-width: 90vw;
 
-  height: 90px;
+  height: 75px;
 
   @media (max-width: 1067px) {
     position: absolute;
     top: 10px;
-    width: 95vw;
-    height: 23.75vw;
+    width: 300px;
+    height: 75px;
   }
 `;
 
@@ -66,8 +61,10 @@ export const TopSectionContentContainer = styled.div`
 `;
 
 export const AtributeList = styled.ul`
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+
   justify-content: space-evenly;
   gap: 2vh;
   li {
@@ -77,14 +74,18 @@ export const AtributeList = styled.ul`
     align-self: flex-start;
     font-weight: 600;
     font-size: 2rem;
+    text-align: center;
     color: white;
     list-style: none;
-    /* text-shadow: 0 0 12px #ffffff; */
     gap: 2rem;
+    width: 100%;
   }
 `;
 
 export const MainRosiImg = styled.img`
+  filter: saturate(0);
+  opacity: 0.9;
+
   margin-top: 100px;
   align-self: flex-end;
   width: 30vw;

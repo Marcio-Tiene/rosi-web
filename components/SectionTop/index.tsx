@@ -1,7 +1,5 @@
 import React from 'react';
 import LandingForm from '../LandingForm';
-// import { FiTarget } from 'react-icons/fi';
-// import { VscFeedback } from 'react-icons/vsc';
 import {
   AtributeList,
   CurveSvg,
@@ -14,33 +12,14 @@ import {
 const TopComponent: React.FC = () => {
   return (
     <>
-      <SectionTop bgImg="/main-bg-img.webp">
+      <SectionTop>
         <MainRosiImg src="/rosi-picture.webp" alt="Foto da Rosi" />
         <TopSectionContentContainer>
           <SectionTopImg src="/logotype.webp" alt="Logotipo Rosi job" />
 
           <AtributeList>
-            <li>
-              {/* <FiTarget
-                color="red"
-                size={50}
-                style={{
-                  backgroundColor: 'white',
-                  borderRadius: '25px',
-                  minHeight: '50px',
-                  minWidth: '50px',
-                }}
-              /> */}
-              Especialista em liderança e Gestão de Pessoas
-            </li>
-            <li>
-              {/* <VscFeedback
-                color="white"
-                size={50}
-                style={{ minHeight: '50px', minWidth: '50px' }}
-              /> */}
-              Mentoria de Liderança e Carreira
-            </li>
+            <li>Especialista em liderança e Gestão de Pessoas</li>
+            <li>Mentoria de Liderança e Carreira</li>
           </AtributeList>
           <LandingForm
             MachineCode={521341}

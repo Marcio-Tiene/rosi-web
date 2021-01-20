@@ -6,15 +6,18 @@ interface IModal {
 
 export const ModalBackground = styled.dialog`
   display: none;
-  position: fixed;
+  position: absolute;
   z-index: 1000;
+  padding: 25px 5px;
 
   opacity: 0;
 
-  place-items: center;
+  align-items: center;
+  flex-direction: column;
 
-  min-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
+  height: fit-content;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(7px);
@@ -46,7 +49,12 @@ export const ModalBackground = styled.dialog`
   ${(p: IModal) =>
     p.show &&
     css`
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-y: auto;
+      height: fit-content;
       opacity: 1;
     `};
 `;
