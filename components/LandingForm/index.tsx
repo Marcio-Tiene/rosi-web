@@ -93,7 +93,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
         });
       } else {
         setIsServerErrorOpen(true);
-        console.error(err.Message);
+        console.error(err.message);
         setTimeout(() => {
           setIsServerErrorOpen(false);
           setIsLoading(false);
