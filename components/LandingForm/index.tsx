@@ -49,7 +49,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     const initialLeadData = {
       Name: '',
       Email: '',
-      Phone: 0,
+      Phone: '',
       MachineCode,
       EmailSequenceCode,
       SequenceLevelCode,
@@ -64,7 +64,13 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     try {
       await LandinPageFormValidation(formatedData);
       const LeadTopost = { ...initialLeadData, ...formatedData };
-      await leadLoversapi.post('/');
+      await leadLoversapi.post(`/Lead?token=${process.env.DB_LEAD_LOVERS_TOKEN}`, formatedData, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `bearer ${process.env.DB_LEAD_LOVERS_ACCESS_TOKEN} `,
+        },
+      });
+
       alert(JSON.stringify(LeadTopost));
       reset();
       setIsPageThanksOpen(true);
@@ -87,7 +93,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
         });
       } else {
         setIsServerErrorOpen(true);
-        console.error(err.message);
+        console.error(err.Message);
         setTimeout(() => {
           setIsServerErrorOpen(false);
           setIsLoading(false);

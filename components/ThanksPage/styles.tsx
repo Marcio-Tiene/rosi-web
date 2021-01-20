@@ -1,19 +1,35 @@
 import styled from 'styled-components';
 
 export const ThanksArticle = styled.article`
+  color: white;
   display: flex;
+  background-image: url('/thanks-page-bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-size: cover;
+
+  padding: 3vh 3vw;
 
   flex-direction: column;
-  width: 300px;
+  width: 90vw;
   max-width: 95vw;
-  height: 150px;
+  height: 80vh;
   max-height: 95vh;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   border-radius: 2rem;
 
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 20px 25px #0000001a;
+  box-shadow: 4px 4px 20px #cbced1;
   transition: linear 0.2s;
+
+  .go-back-button {
+    align-self: flex-end;
+  }
+`;
+
+export const ThanksCardTitle = styled.h1`
+  font-size: 3rem;
+  line-height: 4rem;
 `;

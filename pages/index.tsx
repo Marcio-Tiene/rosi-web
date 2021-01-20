@@ -12,7 +12,7 @@ import SectionWhoIAm from '../components/SectionWhoIAm';
 import PageMainFooter from '../components/PageMainFooter';
 
 const Home: NextPage = () => {
-  const pixelkey = process.env.PIXEL_KEY;
+  const pixelkey = process.env.NEXT_PUBLIC_PIXEL_KEY;
   const { isServerErrorOpen, setIsServerErrorOpen } = ServerErrorHook();
   const { isThanksPageOpen } = ThanksPageModalHook();
   return (

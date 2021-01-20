@@ -43,11 +43,11 @@ const TopComponent: React.FC = () => {
             </li>
           </AtributeList>
           <LandingForm
-            MachineCode={0}
-            SequenceLevelCode={0}
-            EmailSequenceCode={0}
+            MachineCode={521341}
+            SequenceLevelCode={5077683}
+            EmailSequenceCode={1172137}
             Score={10}
-            Source="Landing page meu curso"
+            Source="Website Home Page"
           >
             Que tal trocarmos experiencias sobre liderança e gestão?
           </LandingForm>
