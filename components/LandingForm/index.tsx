@@ -10,7 +10,7 @@ import ThanksPageModalHook from '../../hooks/ThanksPageModalHook';
 import ServerErrorHook from '../../hooks/ServerErrorHook';
 import LoadingSpiner from '../LoadingSpiner';
 import Phonehandler from './services/PhoneHandler';
-// import leadLoversapi from '../../services/leadeLoversApi';
+import leadLoversapi from '../../services/leadeLoversApi';
 interface FormData {
   Name: string;
   Email: string;
@@ -22,6 +22,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
   MachineCode,
   EmailSequenceCode,
   SequenceLevelCode,
+
   Score,
   Source,
 }) => {
@@ -64,14 +65,17 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     try {
       await LandinPageFormValidation(formatedData);
       const LeadTopost = { ...initialLeadData, ...formatedData };
-      // await leadLoversapi.post(`/Lead?token=${process.env.DB_LEAD_LOVERS_TOKEN}`, formatedData, {
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     Authorization: `bearer ${process.env.DB_LEAD_LOVERS_ACCESS_TOKEN} `,
-      //   },
-      // });
+      await leadLoversapi.post(
+        `/Lead?token=${process.env.NEXT_PUBLIC_LEAD_LOVERS_TOKEN}`,
+        LeadTopost,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `bearer ${process.env.NEXT_PUBLIC_LEAD_LOVERS_ACCESS_TOKEN} `,
+          },
+        }
+      );
 
-      console.log(LeadTopost);
       reset();
       setIsPageThanksOpen(true);
       setIsLoading(false);

@@ -1,5 +1,6 @@
 import React from 'react';
 import LandingForm from '../LandingForm';
+import { leadLoversPostAttributes } from './services';
 import {
   AtributeList,
   CurveSvg,
@@ -10,6 +11,7 @@ import {
 } from './styles';
 
 const TopComponent: React.FC = () => {
+  const { EmailSequenceCode, MachineCode, SequenceLevelCode } = leadLoversPostAttributes;
   return (
     <>
       <SectionTop>
@@ -22,11 +24,11 @@ const TopComponent: React.FC = () => {
             <li>Mentoria de Liderança e Carreira</li>
           </AtributeList>
           <LandingForm
-            MachineCode={521341}
-            SequenceLevelCode={5077683}
-            EmailSequenceCode={1172137}
+            MachineCode={MachineCode}
+            SequenceLevelCode={SequenceLevelCode}
+            EmailSequenceCode={EmailSequenceCode}
             Score={10}
-            Source="Website Home Page"
+            Source="Rosi web page"
           >
             Que tal trocarmos experiencias sobre liderança e gestão?
           </LandingForm>
