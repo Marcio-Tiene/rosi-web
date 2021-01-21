@@ -63,6 +63,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
     const formatedData = { ...data, Phone: formatedPhone };
     let formError = {};
     try {
+      throw new Error('test');
       await LandinPageFormValidation(formatedData);
       const LeadTopost = { ...initialLeadData, ...formatedData };
       await leadLoversapi.post(
