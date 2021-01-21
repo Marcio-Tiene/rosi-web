@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 export const ThanksArticle = styled.article`
+  position: relative;
   color: white;
 
   padding: 20px;
@@ -38,6 +39,7 @@ export const ThanksCardTitle = styled.h1`
   font-size: 3rem;
   line-height: fit-content;
   overflow: hidden;
+  margin-top: 5px;
 `;
 
 export const SocialMediaContainer = styled.div`
@@ -53,4 +55,18 @@ export const ThanksParagraph = styled.p`
   font-size: 2rem;
   line-height: 2.5rem;
   text-align: center;
+`;
+
+export const CloseIcon = styled(AiOutlineCloseCircle)`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: linear;
+  cursor: pointer;
+  :hover {
+    color: #c2c2c2;
+  }
+  :active {
+    color: #c2c2c2;
+  }
 `;

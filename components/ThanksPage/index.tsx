@@ -1,11 +1,16 @@
 import React from 'react';
 import ThanksPageModalHook from '../../hooks/ThanksPageModalHook';
-import Button from '../Button';
 import { ModalBackground } from '../Modalbackground';
 import SocialMediaCard from '../SocialMediaCard';
-import { SocialMediaContainer, ThanksArticle, ThanksCardTitle, ThanksParagraph } from './styles';
+import {
+  CloseIcon,
+  SocialMediaContainer,
+  ThanksArticle,
+  ThanksCardTitle,
+  ThanksParagraph,
+} from './styles';
 import { AiFillYoutube, AiFillInstagram } from 'react-icons/ai';
-import { FaTelegramPlane } from 'react-icons/fa';
+import { ImWhatsapp } from 'react-icons/im';
 
 interface IThanksPage {
   show: boolean;
@@ -18,8 +23,9 @@ const ThanksPage: React.FC<IThanksPage> = ({ show }) => {
     <ModalBackground show={show}>
       <ThanksArticle className="animate">
         <ThanksCardTitle>Obrigada por se conectar comigo.</ThanksCardTitle>
+        <CloseIcon size={25} onClick={() => setIsPageThanksOpen(false)} />
         <ThanksParagraph>
-          Para ficar por dentro de tudo que compratilho,
+          Para ficar por dentro de tudo que compartilho,
           <br /> participe das minhas redes sociais.
         </ThanksParagraph>
 
@@ -33,12 +39,12 @@ const ThanksPage: React.FC<IThanksPage> = ({ show }) => {
             mediaLink="https://www.youtube.com/channel/UCwj3gaZVVC9aMoZ2fhjNdNg"
           />
           <SocialMediaCard
-            title="ENTRE NO GRUPO DO TELEGRAM"
-            mediaIcon={<FaTelegramPlane color="white" size={25} />}
-            mediaName="TELEGRAM"
-            bgColor="#0088CC"
-            interactionColor="#0196e0"
-            // mediaLink="https://t.me/testeiden"
+            title="ENTRE NO GRUPO DO WHATSAPP"
+            mediaIcon={<ImWhatsapp color="white" size={25} />}
+            mediaName="WHATSAPP"
+            bgColor="#25D366"
+            interactionColor="#22c05c"
+            mediaLink="https://chat.whatsapp.com/BjbooVmGxko4TuvkJWsevJ"
           />
           <SocialMediaCard
             title="ME SIGA NO INSTAGRAM"
@@ -49,9 +55,6 @@ const ThanksPage: React.FC<IThanksPage> = ({ show }) => {
             mediaLink="https://www.instagram.com/rosijob/"
           />
         </SocialMediaContainer>
-        <Button className="go-back-button" onClick={() => setIsPageThanksOpen(false)}>
-          Voltar
-        </Button>
       </ThanksArticle>
     </ModalBackground>
   );
