@@ -38,7 +38,7 @@ const ThanksPage: React.FC<IThanksPage> = ({ show }) => {
             mediaName="TELEGRAM"
             bgColor="#0088CC"
             interactionColor="#0196e0"
-            mediaLink="https://t.me/testeiden"
+            // mediaLink="https://t.me/testeiden"
           />
           <SocialMediaCard
             title="ME SIGA NO INSTAGRAM"
