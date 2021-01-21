@@ -8,10 +8,12 @@ interface ILoaderSpiner {
 
 const LoadingWrapper = styled.div`
   position: relative;
+  overflow: hidden;
   /*background:#333;*/
   height: ${(p: ILoaderSpiner) => p.height};
   width: ${(p: ILoaderSpiner) => p.containerWidith};
   &.profile-main-loader {
+    overflow: hidden;
     left: 50% !important;
     /* margin-left: -100px; */
     position: absolute;
@@ -22,18 +24,21 @@ const LoadingWrapper = styled.div`
   }
 
   .profile-main-loader .loader {
+    overflow: hidden;
     position: relative;
     margin: 0px auto;
     width: ${(p: ILoaderSpiner) => p.height};
     height: ${(p: ILoaderSpiner) => p.height};
   }
   .profile-main-loader .loader:before {
+    overflow: hidden;
     content: '';
     display: block;
     padding-top: 100%;
   }
 
   .circular-loader {
+    overflow: hidden;
     -webkit-animation: rotate 2s linear infinite;
     animation: rotate 2s linear infinite;
     height: 100%;
@@ -48,6 +53,7 @@ const LoadingWrapper = styled.div`
   }
 
   .loader-path {
+    overflow: hidden;
     stroke-dasharray: 150, 200;
     stroke-dashoffset: -10;
     -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
