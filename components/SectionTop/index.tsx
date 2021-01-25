@@ -20,8 +20,8 @@ const TopComponent: React.FC = () => {
           <SectionTopImg src="/logotype.webp" alt="Logotipo Rosi job" />
 
           <AtributeList>
-            <li>Especialista em liderança e Gestão de Pessoas</li>
-            <li>Mentoria de Liderança e Carreira</li>
+            <li>Mentora de Carreira</li>
+            <li>Especialista em Liderança e Gestão de Pessoas</li>
           </AtributeList>
           <LandingForm
             MachineCode={MachineCode}
@@ -30,7 +30,7 @@ const TopComponent: React.FC = () => {
             Score={10}
             Source="Rosi web page"
           >
-            Que tal trocarmos experiencias sobre liderança e gestão?
+            Cadastra-se aqui para receber ferramentas para sua carreira.
           </LandingForm>
         </TopSectionContentContainer>
 

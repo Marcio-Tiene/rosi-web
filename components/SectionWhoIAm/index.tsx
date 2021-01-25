@@ -22,7 +22,7 @@ const SectionWhoIAm: React.FC = () => {
             pessoas, pois ela acredita que os resultados são 100% gerados por elas.
           </WhoIAmPatagraph>
           <a href="#quero-participar">
-            <Button>Quero me Conectar!</Button>
+            <Button>Quero me cadastrar!</Button>
           </a>
         </WhoIAmArticle>
       </WhoIAmContentWrapper>
