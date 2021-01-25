@@ -29,7 +29,7 @@ export const AchivementsList = styled.ul`
   gap: 2.5rem;
   width: 80vw;
   li {
-    text-align: justify;
+    text-align: left;
     font-weight: 500;
     font-size: 1.5rem;
   }
