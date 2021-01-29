@@ -50,6 +50,7 @@ a {
 
 * {
   box-sizing: border-box;
+  -webkit-appearance:none;
 }
 
 
