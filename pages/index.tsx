@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <SectionWhoIAm />
         <PageMainFooter />
       </PageMain>
-      <ThanksPage show={isThanksPageOpen} />
+      <ThanksPage show={true} />
       <NotificationBanner
         msgType="failure"
         isOpen={isServerErrorOpen}
