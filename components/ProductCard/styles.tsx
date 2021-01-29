@@ -21,7 +21,7 @@ const ProductArticle: IProductArticle = styled.article`
   padding: 1rem;
 
   gap: 1rem;
-  cursor: pointer;
+
   transition: linear 0.3s;
   &:hover {
     background-color: rgba(255, 141, 65, 0.109);

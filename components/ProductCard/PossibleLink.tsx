@@ -7,7 +7,7 @@ interface IPossibleLink {
 const PossibleLink: React.FC<IPossibleLink> = ({ children, linkTo }) => {
   if (linkTo) {
     return (
-      <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <a href={linkTo} style={{ alignSelf: 'flex-end' }} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
