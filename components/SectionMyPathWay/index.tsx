@@ -7,7 +7,11 @@ const SectionMyPathWay: React.FC = () => {
     <SectionTwo>
       <MyPathWayTitle>Cursos, Mentorias e Mais:</MyPathWayTitle>
       <PorductCard
-        productTags={['Desenvolvimento Pessoal', 'Cursos Online e Serviços de Assinatura']}
+        productTags={[
+          'Desenvolvimento Pessoal',
+          'Liderança',
+          'Cursos Online e Serviços de Assinatura',
+        ]}
         linkTo="https://pay.hotmart.com/M40989457X?off=nfqoq262&sck=HOTMART_PRODUCT_PAGE&checkoutMode=0&bid=1611926746389"
         cardTitle="Mentoria Liderança e Gestão de Pessoas"
         cardDescription="Olá, seja muito bem-vindo a Mentoria Liderança e Gestão de Pessoas!
@@ -18,7 +22,11 @@ const SectionMyPathWay: React.FC = () => {
         cardImg="https://static-media.hotmart.com/_2ABhn1cR69PFAUyK393VeryU_M=/600x600/smart/filters:format(jpg):background_color(white)/hotmart/product_contents/29230c67-ef2a-4fbc-9d02-57e78aadedfa/MENTORIAGESTOELIDERANA__HOTMART.jpeg"
       />
       <PorductCard
-        productTags={['Desenvolvimento Pessoal', 'Cursos Online e Serviços de Assinatura']}
+        productTags={[
+          'Desenvolvimento Pessoal',
+          'Carreira',
+          'Cursos Online e Serviços de Assinatura',
+        ]}
         linkTo="https://pay.hotmart.com/E43547900W?split=12&bid=1607291157381&checkoutMode=0"
         cardTitle="Minha Carreira"
         cardDescription="Uma plataforma com aulas gravadas de vários assuntos, como: liderança, foco, disciplina, constância, comunicação, formação de equipe, reuniões produtivas, como fazer entrevistas e muito mais. Além disso, vai ter de forma organizada todas as lives gravadas, resumo de livros, e terá aulas ao vivo."

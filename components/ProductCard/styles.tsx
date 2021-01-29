@@ -41,9 +41,9 @@ ProductArticle.TagWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  @media (max-width: 900px) {
+  /* @media (max-width: 900px) {
     justify-content: center;
-  }
+  } */
 `;
 
 ProductArticle.Tag = styled.span`

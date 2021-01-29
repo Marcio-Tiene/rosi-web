@@ -47,6 +47,7 @@ export const WhoIAmPatagraph = styled.p`
   font-size: 1.5rem;
   color: white;
   width: 30vw;
-  min-width: 300px;
-  text-align: center;
+  min-width: 270px;
+  text-align: left;
+  max-width: 90vw;
 `;
