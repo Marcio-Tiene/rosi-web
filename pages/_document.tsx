@@ -63,7 +63,7 @@ Especialista em Liderança e Gestão de Pessoas"
             content="Mentora de Carreira
 Especialista em Liderança e Gestão de Pessoas"
           />
-          <meta property="og:image" content="/og-img.webp" />
+          <meta property="og:image" content="/og-img.png" />
 
           {/* <!-- Twitter --> */}
           <meta property="twitter:card" content="summary_large_image" />
@@ -74,7 +74,7 @@ Especialista em Liderança e Gestão de Pessoas"
             content="Mentora de Carreira
 Especialista em Liderança e Gestão de Pessoas"
           />
-          <meta property="twitter:image" content="/og-img.webp" />
+          <meta property="twitter:image" content="/og-img.png" />
         </Head>
         <body>
           <Main />
