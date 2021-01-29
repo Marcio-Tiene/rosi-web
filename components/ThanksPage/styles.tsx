@@ -26,6 +26,8 @@ export const ThanksArticle = styled.article`
 
   border-radius: 2rem;
 
+  -webkit-box-shadow: 4px 4px 20px #cbced1;
+  -moz-box-shadow: 4px 4px 20px #cbced1;
   box-shadow: 4px 4px 20px #cbced1;
   transition: linear 0.2s;
   overflow: hidden;

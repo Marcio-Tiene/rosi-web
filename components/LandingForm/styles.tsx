@@ -16,6 +16,8 @@ export const Form = styled(Unform)`
   flex-direction: column;
   border-radius: 2px;
   box-shadow: 4px 4px 8px #cbced1;
+  -webkit-box-shadow: 4px 4px 8px #cbced1;
+  -moz-box-shadow: 4px 4px 8px #cbced1;
   background-color: white;
 
   label {

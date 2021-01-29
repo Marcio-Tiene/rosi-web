@@ -17,6 +17,8 @@ export const NotificatioBox = styled.dialog`
   transform: translateX(-50%) translateY(-150px);
   background: #12db89 0% 0% no-repeat padding-box;
   box-shadow: 0px 20px 25px #0000001a;
+  -webkit-box-shadow: 0px 20px 25px #0000001a;
+  -moz-box-shadow: 0px 20px 25px #0000001a;
   border-radius: 2rem;
 
   display: flex;

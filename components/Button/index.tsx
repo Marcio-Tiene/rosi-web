@@ -15,6 +15,8 @@ const Button = styled.button`
   color: #040205;
   background-color: rgb(255, 160, 97);
   box-shadow: 4px 4px 8px #626466;
+  -webkit-box-shadow: 4px 4px 8px #626466;
+  -moz-box-shadow: 4px 4px 8px #626466;
   border: none;
   outline: none;
   margin-bottom: 10px;
@@ -26,6 +28,8 @@ const Button = styled.button`
   &:active {
     background-color: #ff8d41;
     box-shadow: 0px 0px 0px #626466;
+    -webkit-box-shadow: 0px 0px 0px #626466;
+    -moz-box-shadow: 0px 0px 0px #626466;
   }
 
   &.social-media-card {
