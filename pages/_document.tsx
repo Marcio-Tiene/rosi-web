@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
           <meta name="title" content="Rosi Job" />
           <meta
             name="description"
-            content="Mentora de Carreira
+            content="Mentora de Carreira,
 Especialista em Liderança e Gestão de Pessoas"
           />
 
@@ -71,7 +71,7 @@ Especialista em Liderança e Gestão de Pessoas"
           <meta property="twitter:title" content="Rosi Job" />
           <meta
             property="twitter:description"
-            content="Mentora de Carreira
+            content="Mentora de Carreira,
 Especialista em Liderança e Gestão de Pessoas"
           />
           <meta property="twitter:image" content="/og-img.png" />
