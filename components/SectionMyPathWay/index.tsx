@@ -1,15 +1,20 @@
 import React from 'react';
-import { AchivementsList, MyPathWayTitle, SectionTwo, SectioTwoContainerCurve } from './styles';
+import PorductCard from '../ProductCard';
+import { MyPathWayTitle, SectionTwo, SectioTwoContainerCurve } from './styles';
 
 const SectionMyPathWay: React.FC = () => {
   return (
     <SectionTwo>
-      <MyPathWayTitle>Minha Trajetória:</MyPathWayTitle>
-      <AchivementsList>
-        <li>
-          {/* <CheckIcon color="var(--primary-color)" /> */}
-          Pós graduada em gestão de pessoas, formada em administração e coaching
-        </li>
+      <MyPathWayTitle>Cursos, Mentorias e Mais:</MyPathWayTitle>
+      <PorductCard
+        onCardClick={() => console.log('teste')}
+        // linkTo="https://hotmart.com/product/mentoria-liderenca-e-gestao-de-pessoas/M40989457X?sck=HOTMART_PRODUCT_PAGE"
+        cardTitle="teste test"
+        cardDescription="testando"
+        cardImg="https://static-media.hotmart.com/_2ABhn1cR69PFAUyK393VeryU_M=/600x600/smart/filters:format(jpg):background_color(white)/hotmart/product_contents/29230c67-ef2a-4fbc-9d02-57e78aadedfa/MENTORIAGESTOELIDERANA__HOTMART.jpeg"
+      />
+      {/* <AchivementsList>
+        <li>Pós graduada em gestão de pessoas, formada em administração e coaching</li>
         <li>
           Experiência de mais de 18 anos no ambiente corporativo, sendo 12 em uma multinacional.
         </li>
@@ -19,7 +24,7 @@ const SectionMyPathWay: React.FC = () => {
           por todos os níveis do cargo até que decidi sair e seguir para o empreendedorismo.
         </li>
         <li>Coautora do livro O SUCESSO É TREINÁVEL</li>
-      </AchivementsList>
+      </AchivementsList> */}
       <SectioTwoContainerCurve xmlns="http://www.w3.org/2000/CurveSvg" viewBox="0 0 1440 220">
         <path
           fill="#040205"
