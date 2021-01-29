@@ -12,32 +12,32 @@ export const SectionTwo = styled.section`
   /* justify-content: center; */
   padding: 50px 2.5vw;
   padding-bottom: 210px;
-  gap: 50px;
+
   overflow-y: hidden;
 `;
 
 export const MyPathWayTitle = styled.h1`
   font-size: 3.7rem;
   max-width: 90vw;
-  color: black;
+  color: #000;
 
   @media (max-width: 900px) {
     font-size: 2rem;
   }
 `;
 
-export const AchivementsList = styled.ul`
-  display: flex;
-  flex-direction: column;
+// export const AchivementsList = styled.ul`
+//   display: flex;
+//   flex-direction: column;
 
-  gap: 2.5rem;
-  width: 80vw;
-  li {
-    text-align: left;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-`;
+//   gap: 2.5rem;
+//   width: 80vw;
+//   li {
+//     text-align: left;
+//     font-weight: 500;
+//     font-size: 1.5rem;
+//   }
+// `;
 
 export const CheckIcon = styled(FaCheck)`
   margin-right: 2rem;

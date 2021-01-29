@@ -32,7 +32,7 @@ const ThanksPage: React.FC<IThanksPage> = ({ show }) => {
         <SocialMediaContainer className="social-media-container">
           <SocialMediaCard
             title="ME SIGA NO INSTAGRAM"
-            mediaIcon={<AiFillInstagram color="white" size={25} />}
+            mediaIcon={<AiFillInstagram color="#fff" size={25} />}
             mediaName="INSTAGRAM"
             bgColor="#C23584"
             interactionColor="#E2306C"
@@ -40,7 +40,7 @@ const ThanksPage: React.FC<IThanksPage> = ({ show }) => {
           />
           <SocialMediaCard
             title="ENTRE NO GRUPO DO WHATSAPP"
-            mediaIcon={<ImWhatsapp color="white" size={25} />}
+            mediaIcon={<ImWhatsapp color="#fff" size={25} />}
             mediaName="WHATSAPP"
             bgColor="#25D366"
             interactionColor="#22c05c"
@@ -48,9 +48,9 @@ const ThanksPage: React.FC<IThanksPage> = ({ show }) => {
           />
           <SocialMediaCard
             title="INSCREVA-SE NO MEU CANAL"
-            mediaIcon={<AiFillYoutube color="white" size={25} />}
+            mediaIcon={<AiFillYoutube color="#fff" size={25} />}
             mediaName="YOUTUBE"
-            bgColor="red"
+            bgColor="#ff0000"
             interactionColor="#ce0101"
             mediaLink="https://www.youtube.com/channel/UCwj3gaZVVC9aMoZ2fhjNdNg"
           />

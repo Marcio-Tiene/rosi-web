@@ -16,13 +16,13 @@ export const NotificatioBox = styled.dialog`
   left: 50%;
   transform: translateX(-50%) translateY(-150px);
   background: #12db89 0% 0% no-repeat padding-box;
-  box-shadow: 0px 20px 25px #0000001a;
   -webkit-box-shadow: 0px 20px 25px #0000001a;
   -moz-box-shadow: 0px 20px 25px #0000001a;
+  box-shadow: 0px 20px 25px #0000001a;
   border-radius: 2rem;
 
   display: flex;
-  gap: 2ch;
+
   align-items: center;
   padding: 1rem 2rem;
 
@@ -31,7 +31,7 @@ export const NotificatioBox = styled.dialog`
   }
   p {
     flex: 1;
-    color: white;
+    color: #fff;
   }
   transition: transform 0.7s;
 

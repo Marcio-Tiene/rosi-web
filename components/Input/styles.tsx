@@ -14,31 +14,31 @@ export const FormField = styled.fieldset`
   flex-direction: column;
   border: none;
   input {
-    color: black;
-    box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white;
-    -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white;
-    -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white;
+    color: #000;
+    -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #fff;
+    -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #fff;
+    box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #fff;
     text-indent: 1ch;
     border-radius: 2px;
     font-size: 1rem;
     line-height: 1.5rem;
     border: none;
     width: 100%;
-    transition: linear box-shadow 0.2s;
+    transition: linear 0.2s;
     overflow: hidden;
     &:focus {
       outline: none;
-      box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px green;
-      -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px green;
-      -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px green;
+      -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #fff, 0 0 0 1px #008000;
+      -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #fff, 0 0 0 1px #008000;
+      box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #fff, 0 0 0 1px #008000;
       background-color: transparent;
     }
     ${(p: IInput) =>
       p.inputError &&
       css`
-        box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red, 0 0 0 1px red;
-        -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red, 0 0 0 1px red;
-        -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red, 0 0 0 1px red;
+        -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #ff0000, 0 0 0 1px #ff0000;
+        -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #ff0000, 0 0 0 1px #ff0000;
+        box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px #ff0000, 0 0 0 1px #ff0000;
         background-color: rgba(255, 0, 0, 0.185);
         overflow: hidden;
       `}

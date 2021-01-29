@@ -4,8 +4,8 @@ export const CopyrightFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
-  background-color: white;
+  color: #000;
+  background-color: #fff;
 
   width: 100vw;
   height: 50px;

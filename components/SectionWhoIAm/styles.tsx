@@ -13,23 +13,25 @@ export const SectionRosiHistory = styled.section`
   padding-top: 50px;
 `;
 export const WhoIAmTitle = styled.h1`
-  color: white;
+  color: #fff;
   margin-bottom: 2rem;
   font-size: 3rem;
+  max-width: 90vw;
 `;
 
 export const WhoIAmContentWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+
   flex-wrap: wrap-reverse;
 `;
 export const WhoIAmArticleButton = styled(Button)`
-  margin-bottom: 50px;
+  margin: 50px 0;
 `;
 
 export const WhoIAmImg = styled.img`
+  margin-right: 20px;
   width: 30vw;
   min-width: 300px;
 `;
@@ -40,14 +42,15 @@ export const WhoIAmArticle = styled.article`
   align-self: stretch;
   align-items: center;
   justify-content: space-evenly;
-  gap: 50px;
 `;
 export const WhoIAmPatagraph = styled.p`
   line-height: 2rem;
   font-size: 1.5rem;
-  color: white;
-  width: 30vw;
-  min-width: 270px;
+  color: #fff;
+
   text-align: left;
-  max-width: 90vw;
+  width: 400px;
+  @media (max-width: 900px) {
+    width: 90vw;
+  }
 `;
