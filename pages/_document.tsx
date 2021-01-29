@@ -60,7 +60,7 @@ Especialista em Liderança e Gestão de Pessoas"
           <meta property="og:title" content="Rosi Job" />
           <meta
             property="og:description"
-            content="Mentora de Carreira
+            content="Mentora de Carreira,
 Especialista em Liderança e Gestão de Pessoas"
           />
           <meta property="og:image" content="/og-img.png" />
