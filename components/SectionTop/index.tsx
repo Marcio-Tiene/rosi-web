@@ -29,6 +29,7 @@ const TopComponent: React.FC = () => {
             EmailSequenceCode={EmailSequenceCode}
             Score={10}
             Source="Rosi web page"
+            buttonText="Eu Quero!"
           >
             Cadastra-se aqui para receber ferramentas para sua carreira.
           </LandingForm>

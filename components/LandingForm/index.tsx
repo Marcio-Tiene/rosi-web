@@ -17,7 +17,11 @@ interface FormData {
   Phone: string;
 }
 
-const LandingForm: React.FC<IPostLeadLover> = ({
+interface ILandingFormProps {
+  buttonText: string;
+}
+
+const LandingForm: React.FC<IPostLeadLover & ILandingFormProps> = ({
   children,
   MachineCode,
   EmailSequenceCode,
@@ -25,6 +29,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
 
   Score,
   Source,
+  buttonText,
 }) => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -137,7 +142,7 @@ const LandingForm: React.FC<IPostLeadLover> = ({
           {isLoading ? (
             <LoadingSpiner height="1rem" color="white" containerWidth="5ch" />
           ) : (
-            'Sim Eu Quero!'
+            buttonText
           )}{' '}
         </Button>
       </Form>

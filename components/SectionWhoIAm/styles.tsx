@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from '../Button';
 
 export const SectionRosiHistory = styled.section`
   position: relative;
@@ -24,6 +25,9 @@ export const WhoIAmContentWrapper = styled.div`
   gap: 20px;
   flex-wrap: wrap-reverse;
 `;
+export const WhoIAmArticleButton = styled(Button)`
+  margin-bottom: 50px;
+`;
 
 export const WhoIAmImg = styled.img`
   width: 30vw;
@@ -44,4 +48,5 @@ export const WhoIAmPatagraph = styled.p`
   color: white;
   width: 30vw;
   min-width: 300px;
+  text-align: center;
 `;
