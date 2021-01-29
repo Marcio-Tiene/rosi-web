@@ -39,6 +39,7 @@ const PorductCard: React.FC<IProductCard> = ({
               {cardDescription}
               </ProductArticle.ContentParagraph>
           </ProductArticle.ContentWraper>
+          <ProductArticle.Button>Tenho interesse</ProductArticle.Button>
         </ProductArticle>
       </PossibleLink>
     </>

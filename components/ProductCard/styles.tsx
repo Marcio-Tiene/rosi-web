@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import styled, { StyledComponentBase, ThemedStyledFunction } from 'styled-components';
+import Button from '../Button';
 
 interface IProductArticle extends StyledComponentBase<any, {}> {
   Title?: String & StyledComponentBase<'h1', any, {}, never>;
@@ -10,6 +11,7 @@ interface IProductArticle extends StyledComponentBase<any, {}> {
   ContentWraper?: String & StyledComponentBase<'div', any, {}, never>;
   ContentImg?: String & StyledComponentBase<'img', any, {}, never>;
   ContentParagraph?: String & StyledComponentBase<'p', any, {}, never>;
+  Button?: String & StyledComponentBase<'button', any, {}, never>;
 }
 
 const ProductArticle: IProductArticle = styled.article`
@@ -75,6 +77,11 @@ ProductArticle.ContentParagraph = styled.p`
   @media (max-width: 900px) {
     width: 90vw;
   }
+`;
+
+ProductArticle.Button = styled(Button)`
+  align-self: flex-end;
+  z-index: 10;
 `;
 
 export default ProductArticle;

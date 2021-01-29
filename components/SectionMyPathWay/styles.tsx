@@ -11,7 +11,7 @@ export const SectionTwo = styled.section`
   align-items: center;
   /* justify-content: center; */
   padding: 50px 2.5vw;
-  padding-bottom: 150px;
+  padding-bottom: 210px;
   gap: 50px;
   overflow-y: hidden;
 `;
