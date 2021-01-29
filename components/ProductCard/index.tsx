@@ -3,6 +3,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import PossibleLink from './PossibleLink';
+import ProductArticle from './styles';
 
 interface IProductCard {
   onCardClick?: () => void;
@@ -10,6 +11,7 @@ interface IProductCard {
   cardTitle: string;
   cardDescription: string;
   cardImg: string;
+  productTags:string[];
 }
 
 const PorductCard: React.FC<IProductCard> = ({
@@ -18,18 +20,26 @@ const PorductCard: React.FC<IProductCard> = ({
   cardImg,
   cardTitle,
   onCardClick,
+  productTags
 }) => {
   return (
     <>
       <PossibleLink linkTo={linkTo}>
         
-        <article onClick={() => {if(onCardClick) onCardClick() }}>
-          <h1>{cardTitle}</h1>
-          <div>
-            <img src={cardImg} alt={`${cardTitle} Imagem de divulgação `} />
-            <p>{cardDescription}</p>
-          </div>
-        </article>
+        <ProductArticle onClick={() => {if(onCardClick) onCardClick() }}>
+          <ProductArticle.Title>
+            {cardTitle}
+            </ProductArticle.Title>
+          <ProductArticle.TagWrapper>
+            {productTags.map((tag, index) => <ProductArticle.Tag key={`${tag}_${index}`}>{tag}</ProductArticle.Tag>)}
+          </ProductArticle.TagWrapper>
+          <ProductArticle.ContentWraper>
+            <ProductArticle.ContentImg src={cardImg} alt={`${cardTitle} Imagem de divulgação `} />
+            <ProductArticle.ContentParagraph>
+              {cardDescription}
+              </ProductArticle.ContentParagraph>
+          </ProductArticle.ContentWraper>
+        </ProductArticle>
       </PossibleLink>
     </>
   );
