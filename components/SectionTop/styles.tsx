@@ -83,7 +83,7 @@ export const AtributeList = styled.ul`
 `;
 
 export const MainRosiImg = styled.img`
-  filter: saturate(0);
+  /* filter: saturate(0); */
   opacity: 0.9;
 
   margin-top: 100px;

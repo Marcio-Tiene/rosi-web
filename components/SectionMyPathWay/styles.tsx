@@ -20,6 +20,10 @@ export const MyPathWayTitle = styled.h1`
   font-size: 3.7rem;
   max-width: 90vw;
   color: black;
+
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
 `;
 
 export const AchivementsList = styled.ul`

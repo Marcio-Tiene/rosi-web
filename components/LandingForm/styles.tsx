@@ -14,8 +14,10 @@ export const Form = styled(Unform)`
   height: fit-content;
   display: flex;
   flex-direction: column;
-  border-radius: 2rem;
-  box-shadow: 4px 4px 20px #cbced1;
+  border-radius: 2px;
+  box-shadow: 4px 4px 8px #cbced1;
+  -webkit-box-shadow: 4px 4px 8px #cbced1;
+  -moz-box-shadow: 4px 4px 8px #cbced1;
   background-color: white;
 
   label {

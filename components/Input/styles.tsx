@@ -16,8 +16,10 @@ export const FormField = styled.fieldset`
   input {
     color: black;
     box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white;
+    -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white;
+    -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white;
     text-indent: 1ch;
-    border-radius: 1rem;
+    border-radius: 2px;
     font-size: 1rem;
     line-height: 1.5rem;
     border: none;
@@ -27,12 +29,16 @@ export const FormField = styled.fieldset`
     &:focus {
       outline: none;
       box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px green;
+      -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px green;
+      -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px white, 0 0 0 1px green;
       background-color: transparent;
     }
     ${(p: IInput) =>
       p.inputError &&
       css`
         box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red, 0 0 0 1px red;
+        -webkit-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red, 0 0 0 1px red;
+        -moz-box-shadow: inset 4px 4px 4px #cbced1, inset 4px 4px 4px red, 0 0 0 1px red;
         background-color: rgba(255, 0, 0, 0.185);
         overflow: hidden;
       `}
