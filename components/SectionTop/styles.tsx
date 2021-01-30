@@ -56,7 +56,6 @@ export const TopSectionContentContainer = styled.div`
     margin-top: 20px;
     min-height: fit-content;
     width: 90vw;
-    gap: 20px;
   }
 `;
 
@@ -66,8 +65,9 @@ export const AtributeList = styled.ul`
   flex-direction: column;
 
   justify-content: space-evenly;
-  gap: 2vh;
+
   li {
+    margin: 0.5vh 0;
     display: flex;
     justify-content: center;
     line-height: 3rem;
@@ -75,9 +75,9 @@ export const AtributeList = styled.ul`
     font-weight: 600;
     font-size: 2rem;
     text-align: center;
-    color: white;
+    color: #fff;
     list-style: none;
-    gap: 2rem;
+
     width: 100%;
   }
 `;

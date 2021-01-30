@@ -4,9 +4,11 @@ export const SocialMediaArticle = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  margin: 10px;
+
   .social-media-title {
     font-size: 1rem;
+    margin-bottom: 10px;
   }
 
   .social-media-card {
@@ -16,8 +18,8 @@ export const SocialMediaArticle = styled.article`
     height: 50px;
     font-size: 1rem;
 
-    gap: 10px;
     align-items: center;
     cursor: pointer;
+    margin-top: 10px;
   }
 `;

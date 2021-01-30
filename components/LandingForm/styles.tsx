@@ -15,15 +15,15 @@ export const Form = styled(Unform)`
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-  box-shadow: 4px 4px 8px #cbced1;
   -webkit-box-shadow: 4px 4px 8px #cbced1;
   -moz-box-shadow: 4px 4px 8px #cbced1;
-  background-color: white;
+  box-shadow: 4px 4px 8px #cbced1;
+  background-color: #fff;
 
   label {
     margin-bottom: 3px;
     font-weight: 600;
-    color: black;
+    color: #000;
     overflow: hidden;
   }
 
@@ -37,7 +37,7 @@ export const Form = styled(Unform)`
   .error {
     margin-top: 2px;
     align-self: flex-end;
-    color: red;
+    color: #ff0000;
     font-size: 1rem;
     background-color: transparent;
     overflow: hidden;
@@ -45,7 +45,7 @@ export const Form = styled(Unform)`
 `;
 
 export const FormTitle = styled.h1`
-  color: black;
+  color: #000;
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 1rem;

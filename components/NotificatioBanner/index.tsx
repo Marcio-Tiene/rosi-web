@@ -22,7 +22,7 @@ const NotificationBanner: React.FC<INotification> = ({
       {icon}
       <p>{children}</p>
       <CloseSpan onClick={closeOnClick}>
-        <CgClose color="white" size={20} />
+        <CgClose color="#fff" size={20} />
       </CloseSpan>
     </NotificatioBox>
   );

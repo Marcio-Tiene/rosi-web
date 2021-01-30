@@ -26,8 +26,7 @@ const SocialMediaCard: React.FC<ISocialMediaCard> = ({
       <FaArrowDown size={30} />
       <a href={mediaLink} target="_blank" rel="noopener noreferrer">
         <Button bgColor={bgColor} interactionColor={interactionColor} className="social-media-card">
-          {mediaIcon}
-          {mediaName}
+          {mediaIcon} {mediaName}
         </Button>
       </a>
     </SocialMediaArticle>

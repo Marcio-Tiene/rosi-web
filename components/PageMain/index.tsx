@@ -6,7 +6,7 @@ const PageMain = styled.main`
   min-height: 100vh;
   width: 100vw;
   scrollbar-width: thin;
-  scrollbar-color: var(--Ink) transparent;
+  scrollbar-color: #000 transparent;
   overflow-y: auto;
   overflow-x: hidden;
   ::-webkit-scrollbar {
@@ -20,7 +20,7 @@ const PageMain = styled.main`
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--Ink);
+    background: #000;
     border-radius: 5px;
   }
 `;

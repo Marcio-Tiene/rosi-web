@@ -140,7 +140,7 @@ const LandingForm: React.FC<IPostLeadLover & ILandingFormProps> = ({
         />
         <Button disabled={isLoading} type="submit">
           {isLoading ? (
-            <LoadingSpiner height="1rem" color="white" containerWidth="5ch" />
+            <LoadingSpiner height="1rem" color="#000" containerWidth="5ch" />
           ) : (
             buttonText
           )}{' '}
