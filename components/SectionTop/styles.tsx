@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const SectionTop = styled.section`
-  z-index: -2;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +22,7 @@ export const SectionTop = styled.section`
 `;
 
 export const CurveSvg = styled.svg`
-  z-index: -1;
+  z-index: 2;
   position: absolute;
 
   bottom: -1px;
@@ -32,17 +31,24 @@ export const CurveSvg = styled.svg`
   width: 100vw;
   overflow-x: hidden;
 `;
-export const SectionTopImg = styled.img`
-  width: 300px;
-  max-width: 90vw;
-
-  height: 75px;
+export const SectionTopImg = styled.picture`
+  z-index: 2;
 
   @media (max-width: 1067px) {
     position: absolute;
     top: 10px;
+  }
+
+  img {
     width: 300px;
+    max-width: 90vw;
+
     height: 75px;
+
+    @media (max-width: 1067px) {
+      width: 300px;
+      height: 75px;
+    }
   }
 `;
 
@@ -84,22 +90,24 @@ export const AtributeList = styled.ul`
   }
 `;
 
-export const MainRosiImg = styled.img`
-  z-index: -2;
-  /* filter: saturate(0); */
-  opacity: 0.9;
-
-  margin-top: 100px;
+export const MainRosiImg = styled.picture`
+  display: flex;
+  align-items: flex-end;
   align-self: flex-end;
-  width: 30vw;
-  min-width: 300px;
 
-  max-width: 95vw;
-  @media (max-width: 1067px) {
-    margin-top: calc(23.75vw + 10px);
-    width: 95vw;
-  }
-  @media (max-width: 900px) {
-    /* display: none; */
+  img {
+    z-index: 2;
+    /* filter: saturate(0); */
+    opacity: 0.9;
+
+    width: 30vw;
+    min-width: 300px;
+    margin-top: 100px;
+
+    max-width: 95vw;
+    @media (max-width: 1067px) {
+      margin-top: calc(23.75vw + 10px);
+      width: 95vw;
+    }
   }
 `;
