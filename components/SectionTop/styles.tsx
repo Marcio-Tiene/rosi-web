@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionTop = styled.section`
+  z-index: -2;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +23,7 @@ export const SectionTop = styled.section`
 `;
 
 export const CurveSvg = styled.svg`
+  z-index: -1;
   position: absolute;
 
   bottom: -1px;
@@ -83,6 +85,7 @@ export const AtributeList = styled.ul`
 `;
 
 export const MainRosiImg = styled.img`
+  z-index: -2;
   /* filter: saturate(0); */
   opacity: 0.9;
 

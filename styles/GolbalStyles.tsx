@@ -3,11 +3,15 @@ const GlobalStyles = createGlobalStyle`
 
 
 *{
+
+  box-sizing: border-box;
+  -webkit-appearance:none;
     
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scrollbar-width: thin;
+    
   scrollbar-color: rgba(0, 0, 63, 0.342) transparent;
   overflow-y: auto;
   overflow-x: hidden;
@@ -17,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: none;
+    background: transparent;
   }
 
   /* Handle */
@@ -48,10 +52,7 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-  -webkit-appearance:none;
-}
+
 
 
 `;
