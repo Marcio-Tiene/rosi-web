@@ -11,7 +11,7 @@ export const SectionTwo = styled.section`
   align-items: center;
   /* justify-content: center; */
   padding: 50px 2.5vw;
-  padding-bottom: 210px;
+  /* padding-bottom: 14vw; */
 
   overflow-y: hidden;
 `;
@@ -45,7 +45,7 @@ export const CheckIcon = styled(FaCheck)`
 
 export const SectioTwoContainerCurve = styled.svg`
   position: absolute;
-
+  z-index: -10;
   bottom: -1px;
   left: 0;
   display: block;
