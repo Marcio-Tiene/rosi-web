@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     scrollbar-width: thin;
-    
+
   scrollbar-color: rgba(0, 0, 63, 0.342) transparent;
   overflow-y: auto;
   overflow-x: hidden;
@@ -28,6 +28,14 @@ const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 63, 0.342);
     border-radius: 5px;
+  }
+
+  @media (max-width:900px) {
+    scrollbar-width: none;
+    ::-webkit-scrollbar {
+    width: 0px;
+  }
+
   }
   }
 
