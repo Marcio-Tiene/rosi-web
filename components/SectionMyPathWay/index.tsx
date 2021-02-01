@@ -32,18 +32,7 @@ const SectionMyPathWay: React.FC = () => {
         cardDescription="Uma plataforma com aulas gravadas de vários assuntos, como: liderança, foco, disciplina, constância, comunicação, formação de equipe, reuniões produtivas, como fazer entrevistas e muito mais. Além disso, vai ter de forma organizada todas as lives gravadas, resumo de livros, e terá aulas ao vivo."
         cardImg="/minha-carreira-curso.jpg"
       />
-      {/* <AchivementsList>
-        <li>Pós graduada em gestão de pessoas, formada em administração e coaching</li>
-        <li>
-          Experiência de mais de 18 anos no ambiente corporativo, sendo 12 em uma multinacional.
-        </li>
-        <li>Premiada como uma das 5 melhores gerentes do Brasil.</li>
-        <li>
-          Fui contratada como vendedora e em menos de dois anos já ocupava cargo de gerência, passei
-          por todos os níveis do cargo até que decidi sair e seguir para o empreendedorismo.
-        </li>
-        <li>Coautora do livro O SUCESSO É TREINÁVEL</li>
-      </AchivementsList> */}
+
       <SectioTwoContainerCurve xmlns="http://www.w3.org/2000/CurveSvg" viewBox="0 0 1440 220">
         <path
           fill="#040205"

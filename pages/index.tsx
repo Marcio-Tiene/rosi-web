@@ -1,5 +1,5 @@
 import PageHead from '../components/PageHead';
-import { NextPage } from 'next';
+import { NextPage, GetStaticProps } from 'next';
 import PageMain from '../components/PageMain';
 import Pixel from '../components/PageHead/services/Facebook/Pixel';
 import TopComponent from '../components/SectionTop';
@@ -40,3 +40,10 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+    revalidate: 3600, // In seconds
+  };
+};
