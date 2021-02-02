@@ -12,6 +12,7 @@ import {
 
 const TopComponent: React.FC = () => {
   const { EmailSequenceCode, MachineCode, SequenceLevelCode } = leadLoversPostAttributes;
+
   return (
     <>
       <SectionTop>
