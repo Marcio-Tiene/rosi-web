@@ -10,7 +10,7 @@ interface IProductArticle extends StyledComponentBase<any, {}> {
   Tag?: String & StyledComponentBase<'span', any, {}, never>;
   ContentWraper?: String & StyledComponentBase<'div', any, {}, never>;
   ContentImg?: String & StyledComponentBase<'img', any, {}, never>;
-  ContentParagraph?: String & StyledComponentBase<'p', any, {}, never>;
+  ContentParagraph?: String & StyledComponentBase<'div', any, {}, never>;
   Button?: String & StyledComponentBase<'button', any, {}, never>;
 }
 
@@ -77,7 +77,7 @@ ProductArticle.ContentImg = styled.img`
   }
 `;
 
-ProductArticle.ContentParagraph = styled.p`
+ProductArticle.ContentParagraph = styled.div`
   margin: 0.5rem;
   width: 615px;
 
@@ -90,6 +90,16 @@ ProductArticle.Button = styled(Button)`
   margin: 1rem 0.5rem;
   align-self: flex-end;
   z-index: 10;
+`;
+
+export const ProductButtonsContainer = styled.div`
+  flex-wrap: wrap;
+  display: flex;
+  align-self: flex-end;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export default ProductArticle;

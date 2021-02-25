@@ -2,19 +2,25 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import PossibleLink from './PossibleLink';
-import ProductArticle from './styles';
+import ProductArticle, { ProductButtonsContainer } from './styles';
 
 interface IProductCard {
   onCardClick?: () => void;
-  linkTo?: string;
+
   cardTitle: string;
-  cardDescription: string;
+  cardDescription: JSX.Element;
   cardImg: string;
   productTags: string[];
+  ProductButtons: IProductButtons[];
+}
+
+interface IProductButtons {
+  linkTo?: string;
+  buttonText: string;
 }
 
 const PorductCard: React.FC<IProductCard> = ({
-  linkTo,
+  ProductButtons,
   cardDescription,
   cardImg,
   cardTitle,
@@ -37,9 +43,17 @@ const PorductCard: React.FC<IProductCard> = ({
         <ProductArticle.ContentImg src={cardImg} alt={`${cardTitle} Imagem de divulgação `} />
         <ProductArticle.ContentParagraph>{cardDescription}</ProductArticle.ContentParagraph>
       </ProductArticle.ContentWraper>
-      <PossibleLink linkTo={linkTo}>
-        <ProductArticle.Button>Tenho interesse</ProductArticle.Button>
-      </PossibleLink>
+      <ProductButtonsContainer>
+        {ProductButtons.map((productButton, index) => (
+          <>
+            <PossibleLink linkTo={productButton.linkTo}>
+              <ProductArticle.Button key={index + productButton.buttonText}>
+                {productButton.buttonText}
+              </ProductArticle.Button>
+            </PossibleLink>
+          </>
+        ))}
+      </ProductButtonsContainer>
     </ProductArticle>
   );
 };

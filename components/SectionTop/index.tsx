@@ -12,6 +12,7 @@ import {
 
 const TopComponent: React.FC = () => {
   const { EmailSequenceCode, MachineCode, SequenceLevelCode } = leadLoversPostAttributes;
+
   return (
     <>
       <SectionTop>
@@ -28,8 +29,8 @@ const TopComponent: React.FC = () => {
           </SectionTopImg>
 
           <AtributeList>
-            <li>Mentora de Carreira</li>
-            <li>Especialista em Liderança e Gestão de Pessoas</li>
+            <li> CADASTRA-SE AQUI PARA RECEBER CONTEÚDOS</li>
+            <li>E FERRAMENTAS PARA SUA CARREIRA.</li>
           </AtributeList>
           <LandingForm
             MachineCode={MachineCode}
@@ -37,9 +38,9 @@ const TopComponent: React.FC = () => {
             EmailSequenceCode={EmailSequenceCode}
             Score={10}
             Source="Rosi web page"
-            buttonText="Eu Quero!"
+            buttonText="EU QUERO!"
           >
-            Cadastra-se aqui para receber ferramentas para sua carreira.
+            Fique por dentro de todas as novidades.
           </LandingForm>
         </TopSectionContentContainer>
 

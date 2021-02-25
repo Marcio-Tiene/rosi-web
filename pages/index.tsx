@@ -1,5 +1,5 @@
 import PageHead from '../components/PageHead';
-import { NextPage, GetStaticProps } from 'next';
+import { NextPage } from 'next';
 import PageMain from '../components/PageMain';
 import Pixel from '../components/PageHead/services/Facebook/Pixel';
 import TopComponent from '../components/SectionTop';
@@ -15,6 +15,7 @@ const Home: NextPage = () => {
   const pixelkey = process.env.NEXT_PUBLIC_PIXEL_KEY;
   const { isServerErrorOpen, setIsServerErrorOpen } = ServerErrorHook();
   const { isThanksPageOpen } = ThanksPageModalHook();
+
   return (
     <>
       <PageHead />
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
 
       <PageMain>
         <TopComponent />
-        <SectionMyPathWay>alo alo</SectionMyPathWay>
+        <SectionMyPathWay />
         <SectionWhoIAm />
         <PageMainFooter />
       </PageMain>
@@ -40,10 +41,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-    revalidate: 3600, // In seconds
-  };
-};
