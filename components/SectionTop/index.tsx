@@ -38,7 +38,7 @@ const TopComponent: React.FC = () => {
             EmailSequenceCode={EmailSequenceCode}
             Score={10}
             Source="Rosi web page"
-            buttonText="Eu Quero!"
+            buttonText="EU QUERO!"
           >
             Fique por dentro de todas as novidades.
           </LandingForm>

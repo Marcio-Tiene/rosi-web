@@ -31,7 +31,7 @@ const SectionWhoIAm: React.FC = () => {
             do livro &quot;O Suscesso é treinável&quot;.
           </WhoIAmPatagraph>
           <a href="#quero-participar">
-            <WhoIAmArticleButton>Quero me cadastrar!</WhoIAmArticleButton>
+            <WhoIAmArticleButton>QUERO ME CADASTRAR!</WhoIAmArticleButton>
           </a>
         </WhoIAmArticle>
       </WhoIAmContentWrapper>

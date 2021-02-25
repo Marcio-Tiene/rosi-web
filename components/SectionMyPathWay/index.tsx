@@ -34,7 +34,7 @@ const SectionMyPathWay: React.FC = () => {
             <strong> Formato:</strong> 12 encontros, online e ao vivo
             <br />
             <br />
-            <strong> Para quem?</strong> Líderes e para quem quer ser, lembre-se habilidade de
+            <strong> Para quem?</strong> Líderes e para quem quer ser. {`  `}Lembre-se habilidade de
             liderar não tem relação única com cargo.
             <br />
             <br />
