@@ -8,7 +8,7 @@ interface IProductCard {
   onCardClick?: () => void;
 
   cardTitle: string;
-  cardDescription: string;
+  cardDescription: JSX.Element;
   cardImg: string;
   productTags: string[];
   ProductButtons: IProductButtons[];

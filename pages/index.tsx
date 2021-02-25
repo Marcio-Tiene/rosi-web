@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
       <PageMain>
         <TopComponent />
-        <SectionMyPathWay>alo alo</SectionMyPathWay>
+        <SectionMyPathWay />
         <SectionWhoIAm />
         <PageMainFooter />
       </PageMain>

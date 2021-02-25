@@ -10,7 +10,7 @@ interface IProductArticle extends StyledComponentBase<any, {}> {
   Tag?: String & StyledComponentBase<'span', any, {}, never>;
   ContentWraper?: String & StyledComponentBase<'div', any, {}, never>;
   ContentImg?: String & StyledComponentBase<'img', any, {}, never>;
-  ContentParagraph?: String & StyledComponentBase<'p', any, {}, never>;
+  ContentParagraph?: String & StyledComponentBase<'div', any, {}, never>;
   Button?: String & StyledComponentBase<'button', any, {}, never>;
 }
 
@@ -77,7 +77,7 @@ ProductArticle.ContentImg = styled.img`
   }
 `;
 
-ProductArticle.ContentParagraph = styled.p`
+ProductArticle.ContentParagraph = styled.div`
   margin: 0.5rem;
   width: 615px;
 
