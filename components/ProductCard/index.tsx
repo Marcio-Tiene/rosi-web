@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import PossibleLink from './PossibleLink';
-import ProductArticle from './styles';
+import ProductArticle, { ProductButtonsContainer } from './styles';
 
 interface IProductCard {
   onCardClick?: () => void;
@@ -43,7 +43,7 @@ const PorductCard: React.FC<IProductCard> = ({
         <ProductArticle.ContentImg src={cardImg} alt={`${cardTitle} Imagem de divulgação `} />
         <ProductArticle.ContentParagraph>{cardDescription}</ProductArticle.ContentParagraph>
       </ProductArticle.ContentWraper>
-      <div style={{ alignSelf: 'flex-end' }}>
+      <ProductButtonsContainer>
         {ProductButtons.map((productButton, index) => (
           <>
             <PossibleLink linkTo={productButton.linkTo}>
@@ -53,7 +53,7 @@ const PorductCard: React.FC<IProductCard> = ({
             </PossibleLink>
           </>
         ))}
-      </div>
+      </ProductButtonsContainer>
     </ProductArticle>
   );
 };

@@ -92,4 +92,14 @@ ProductArticle.Button = styled(Button)`
   z-index: 10;
 `;
 
+export const ProductButtonsContainer = styled.div`
+  flex-wrap: wrap;
+  display: flex;
+  align-self: flex-end;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
 export default ProductArticle;
