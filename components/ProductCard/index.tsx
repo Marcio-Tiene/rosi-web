@@ -43,15 +43,17 @@ const PorductCard: React.FC<IProductCard> = ({
         <ProductArticle.ContentImg src={cardImg} alt={`${cardTitle} Imagem de divulgação `} />
         <ProductArticle.ContentParagraph>{cardDescription}</ProductArticle.ContentParagraph>
       </ProductArticle.ContentWraper>
-      {ProductButtons.map((productButton, index) => (
-        <>
-          <PossibleLink linkTo={productButton.linkTo}>
-            <ProductArticle.Button key={index + productButton.buttonText}>
-              {productButton.buttonText}
-            </ProductArticle.Button>
-          </PossibleLink>
-        </>
-      ))}
+      <div style={{ alignSelf: 'flex-end' }}>
+        {ProductButtons.map((productButton, index) => (
+          <>
+            <PossibleLink linkTo={productButton.linkTo}>
+              <ProductArticle.Button key={index + productButton.buttonText}>
+                {productButton.buttonText}
+              </ProductArticle.Button>
+            </PossibleLink>
+          </>
+        ))}
+      </div>
     </ProductArticle>
   );
 };

@@ -29,6 +29,7 @@ const SectionMyPathWay: React.FC = () => {
         ]}
         ProductButtons={[
           { buttonText: 'compre now', linkTo: 'https://www.youtube.com/watch?v=J4BVaXkwmM8' },
+          { buttonText: 'compre now', linkTo: 'https://www.youtube.com/watch?v=J4BVaXkwmM8' },
         ]}
         cardTitle="Minha Carreira"
         cardDescription="Uma plataforma com aulas gravadas de vários assuntos, como: liderança, foco, disciplina, constância, comunicação, formação de equipe, reuniões produtivas, como fazer entrevistas e muito mais. Além disso, vai ter de forma organizada todas as lives gravadas, resumo de livros, e terá aulas ao vivo."
