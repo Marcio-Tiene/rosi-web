@@ -134,7 +134,7 @@ const LandingForm: React.FC<IPostLeadLover & ILandingFormProps> = ({
         <Input
           hasError={hasInputError.Phone}
           onFocus={() => clearInputError('Phone')}
-          placeholder="Só números"
+          placeholder="(xx)xxxxx-xxxx"
           name="Phone"
           label="Telefone*"
         />

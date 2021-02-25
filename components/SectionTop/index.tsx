@@ -29,8 +29,8 @@ const TopComponent: React.FC = () => {
           </SectionTopImg>
 
           <AtributeList>
-            <li>Mentora de Carreira</li>
-            <li>Especialista em Liderança e Gestão de Pessoas</li>
+            <li> CADASTRA-SE AQUI PARA RECEBER CONTEÚDOS</li>
+            <li>E FERRAMENTAS PARA SUA CARREIRA.</li>
           </AtributeList>
           <LandingForm
             MachineCode={MachineCode}
@@ -40,7 +40,7 @@ const TopComponent: React.FC = () => {
             Source="Rosi web page"
             buttonText="Eu Quero!"
           >
-            Cadastra-se aqui para receber ferramentas para sua carreira.
+            Fique por dentro de todas as novidades.
           </LandingForm>
         </TopSectionContentContainer>
 
