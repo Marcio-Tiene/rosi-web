@@ -7,11 +7,13 @@ const SectionMyPathWay: React.FC = () => {
     <SectionTwo>
       <MyPathWayTitle>Cursos, Mentorias e Mais:</MyPathWayTitle>
       <PorductCard
-        productTags={[
-          'Desenvolvimento Pessoal',
-          'Liderança',
-          'Cursos Online e Serviços de Assinatura',
-        ]}
+        productTags={
+          [
+            // 'Desenvolvimento Pessoal',
+            // 'Liderança',
+            // 'Cursos Online e Serviços de Assinatura',
+          ]
+        }
         ProductButtons={[
           {
             linkTo: 'https://pay.hotmart.com/M40989457X?checkoutMode=10&bid=1613756984372',
@@ -44,18 +46,20 @@ const SectionMyPathWay: React.FC = () => {
         cardImg="/mentoria-liderança.jpeg"
       />
       <PorductCard
-        productTags={[
-          'Desenvolvimento Pessoal',
-          'Carreira',
-          'Cursos Online e Serviços de Assinatura',
-        ]}
+        productTags={
+          [
+            // 'Desenvolvimento Pessoal',
+            // 'Carreira',
+            // 'Cursos Online e Serviços de Assinatura',
+          ]
+        }
         ProductButtons={[
           {
             buttonText: 'PLANO MENSAL',
             linkTo: 'https://pay.hotmart.com/E43547900W?split=12&bid=1607291157381&checkoutMode=0',
           },
           {
-            buttonText: 'PLANO ANUAL (GANHE 12 E PAGUE 10 MESES)',
+            buttonText: 'PLANO ANUAL',
             linkTo:
               'https://pay.hotmart.com/E43547900W?off=i1zn5282&bid=1607430681285&checkoutMode=0',
           },
@@ -82,7 +86,7 @@ const SectionMyPathWay: React.FC = () => {
             <strong>COMECE AGORA!</strong>
           </p>
         }
-        cardImg="/minha-carreira-curso.jpg"
+        cardImg="/minha-carreira-curso.jpeg"
       />
 
       <SectioTwoContainerCurve xmlns="http://www.w3.org/2000/CurveSvg" viewBox="0 0 1440 220">

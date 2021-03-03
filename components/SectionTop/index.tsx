@@ -29,8 +29,7 @@ const TopComponent: React.FC = () => {
           </SectionTopImg>
 
           <AtributeList>
-            <li> CADASTRA-SE AQUI PARA RECEBER CONTEÚDOS</li>
-            <li>E FERRAMENTAS PARA SUA CARREIRA.</li>
+            <li> CADASTRA-SE AQUI PARA RECEBER CONTEÚDOS E FERRAMENTAS PARA SUA CARREIRA.</li>
           </AtributeList>
           <LandingForm
             MachineCode={MachineCode}
