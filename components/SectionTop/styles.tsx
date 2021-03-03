@@ -85,8 +85,16 @@ export const AtributeList = styled.ul`
     text-align: center;
     color: #fff;
     list-style: none;
+    max-width: 800px;
 
     width: 100%;
+
+    @media (max-width: 1067px) {
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+      /* text-align: left;
+      padding-left: 5vw; */
+    }
   }
 `;
 

@@ -44,7 +44,7 @@ export const WhoIAmArticle = styled.article`
   justify-content: space-evenly;
 `;
 export const WhoIAmPatagraph = styled.p`
-  line-height: 2rem;
+  line-height: 2.1rem;
   font-size: 1.5rem;
   color: #fff;
 
