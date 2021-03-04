@@ -102,4 +102,6 @@ export const ProductButtonsContainer = styled.div`
   }
 `;
 
+export const ProductLink = styled.a``;
+
 export default ProductArticle;

@@ -7,13 +7,13 @@ const SectionMyPathWay: React.FC = () => {
     <SectionTwo>
       <MyPathWayTitle>Cursos, Mentorias e Mais:</MyPathWayTitle>
       <PorductCard
-        productTags={
-          [
-            // 'Desenvolvimento Pessoal',
-            // 'Liderança',
-            // 'Cursos Online e Serviços de Assinatura',
-          ]
-        }
+        // productTags={
+        //   [
+        //     // 'Desenvolvimento Pessoal',
+        //     // 'Liderança',
+        //     // 'Cursos Online e Serviços de Assinatura',
+        //   ]
+        // }
         ProductButtons={[
           {
             linkTo: 'https://pay.hotmart.com/M40989457X?checkoutMode=10&bid=1613756984372',
@@ -46,22 +46,22 @@ const SectionMyPathWay: React.FC = () => {
         cardImg="/mentoria-liderança.jpeg"
       />
       <PorductCard
-        productTags={
-          [
-            // 'Desenvolvimento Pessoal',
-            // 'Carreira',
-            // 'Cursos Online e Serviços de Assinatura',
-          ]
-        }
+        // productTags={
+        //   [
+        //     // 'Desenvolvimento Pessoal',
+        //     // 'Carreira',
+        //     // 'Cursos Online e Serviços de Assinatura',
+        //   ]
+        // }
         ProductButtons={[
           {
             buttonText: 'PLANO MENSAL',
-            linkTo: 'https://pay.hotmart.com/E43547900W?split=12&bid=1607291157381&checkoutMode=0',
+            linkTo:
+              'https://pay.hotmart.com/E43547900W?off=rxdx0eew&checkoutMode=4&bid=1614853658906',
           },
           {
             buttonText: 'PLANO ANUAL',
-            linkTo:
-              'https://pay.hotmart.com/E43547900W?off=i1zn5282&bid=1607430681285&checkoutMode=0',
+            linkTo: 'https://pay.hotmart.com/E43547900W?split=12&bid=1607291157381&checkoutMode=4',
           },
         ]}
         cardTitle="Minha Carreira"

@@ -7,6 +7,7 @@ interface IButton {
 
 const Button = styled.button`
   width: fit-content;
+  min-width: 160px;
 
   border-radius: 2px;
   padding: 0.5rem 1rem;
