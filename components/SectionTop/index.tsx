@@ -29,7 +29,9 @@ const TopComponent: React.FC = () => {
           </SectionTopImg>
 
           <AtributeList>
-            <li> CADASTRA-SE AQUI PARA RECEBER CONTEÚDOS E FERRAMENTAS PARA SUA CARREIRA.</li>
+            <li key={`${Math.random() * 10000}`}>
+              CADASTRA-SE AQUI PARA RECEBER CONTEÚDOS E FERRAMENTAS PARA SUA CARREIRA.
+            </li>
           </AtributeList>
           <LandingForm
             MachineCode={MachineCode}

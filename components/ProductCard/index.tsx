@@ -10,7 +10,7 @@ interface IProductCard {
   cardTitle: string;
   cardDescription: JSX.Element;
   cardImg: string;
-  productTags: string[];
+  // productTags: string[];
   ProductButtons: IProductButtons[];
 }
 
@@ -25,7 +25,6 @@ const PorductCard: React.FC<IProductCard> = ({
   cardImg,
   cardTitle,
   onCardClick,
-  productTags,
 }) => {
   return (
     <ProductArticle
@@ -34,11 +33,13 @@ const PorductCard: React.FC<IProductCard> = ({
       }}
     >
       <ProductArticle.Title>{cardTitle}</ProductArticle.Title>
-      <ProductArticle.TagWrapper>
+      {/* <ProductArticle.TagWrapper>
         {productTags.map((tag, index) => (
-          <ProductArticle.Tag key={`${tag}_${index}`}>{tag}</ProductArticle.Tag>
+          <ProductArticle.Tag key={`${tag}_${index + 100}_${Math.random() * 100}`}>
+            {tag}
+          </ProductArticle.Tag>
         ))}
-      </ProductArticle.TagWrapper>
+      </ProductArticle.TagWrapper> */}
       <ProductArticle.ContentWraper>
         <ProductArticle.ContentImg src={cardImg} alt={`${cardTitle} Imagem de divulgação `} />
         <ProductArticle.ContentParagraph>{cardDescription}</ProductArticle.ContentParagraph>
@@ -46,8 +47,14 @@ const PorductCard: React.FC<IProductCard> = ({
       <ProductButtonsContainer>
         {ProductButtons.map((productButton, index) => (
           <>
-            <PossibleLink linkTo={productButton.linkTo}>
-              <ProductArticle.Button key={index + productButton.buttonText}>
+            <PossibleLink
+              linkKey={`${productButton.buttonText}_${(index + 100) * 237}_${Math.random() * 100}`}
+              key={`${productButton.buttonText}_${index + 100}_${Math.random() * 100}`}
+              linkTo={productButton.linkTo}
+            >
+              <ProductArticle.Button
+                key={`${index + 100}_${productButton.buttonText}_${Math.random() * 100} `}
+              >
                 {productButton.buttonText}
               </ProductArticle.Button>
             </PossibleLink>

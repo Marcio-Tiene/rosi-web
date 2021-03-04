@@ -1,15 +1,23 @@
 import React from 'react';
+import { ProductLink } from './styles';
 
 interface IPossibleLink {
   linkTo?: string;
+  linkKey: string;
 }
 
-const PossibleLink: React.FC<IPossibleLink> = ({ children, linkTo }) => {
+const PossibleLink: React.FC<IPossibleLink> = ({ children, linkTo, linkKey }) => {
   if (linkTo) {
     return (
-      <a href={linkTo} style={{ alignSelf: 'flex-end' }} target="_blank" rel="noopener noreferrer">
+      <ProductLink
+        key={linkKey}
+        href={linkTo}
+        style={{ alignSelf: 'flex-end' }}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {children}
-      </a>
+      </ProductLink>
     );
   } else {
     return <>{children}</>;
